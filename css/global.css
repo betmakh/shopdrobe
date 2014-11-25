@@ -1,0 +1,13 @@
+.container{background:#ff0;width:970px}
+header.header .navbar{background:0 0;border:none}
+header.header .logo{width:190px;float:left;display:block;height:50px;background:url(../img/logo.png) 50% 50% no-repeat}
+.ipad{background-image:url(../img/ipad.png);background-position:100% 100%;background-repeat:no-repeat}
+h1{font-size:48px;font-family:helveticaneuecyrlight,arial,sans-serif;color:#934138}
+h3{font-size:28px;font-family:helveticaneuecyrlight,arial,sans-serif;color:#934138}
+button.fb{font-family:helveticaneuecyrlight,arial,sans-serif;color:#fff;font-size:26px;padding:10px 20px 10px 40px;position:relative;border:none;border-radius:7px;background:#3054a0;box-shadow:inset 0 0 16px #9cb7f2;display:inline-block;-webkit-transition:.3s ease;transition:.3s ease;outline:0}
+button.fb:active{box-shadow:inset 0 0 6px rgba(52,78,134,.75)}
+button.fb:after{content:'';position:absolute;width:24px;height:90%;background:url(../img/fb-icon.png) 0 50% no-repeat;top:3px;left:10px;border-right:1px solid #fff}
+.nav.default-nav li>a{color:#934138;border:2px solid transparent;border-radius:6px;padding:8px 12px;-webkit-transition:.3s linear;transition:.3s linear;font-size:17px;background:rgba(255,255,255,.5);font-family:helveticaneuecyrmedium,arial,sans-serif}
+.nav.default-nav li>a:hover{background:rgba(147,65,56,.5);color:#934138}
+.nav.default-nav li.active a{color:#934138;background:rgba(255,255,255,.5);border-color:rgba(147,65,56,.5)}
+.nav.default-nav li.active a:hover{color:#934138;background:rgba(147,65,56,.5);border-color:transparent}
