@@ -1,13 +1,55 @@
+html,html a{-webkit-font-smoothing:antialiased;text-shadow:1px 1px 1px rgba(0,0,0,.004)}
 .container{background:#ff0;width:970px}
-header.header .navbar{background:0 0;border:none}
+header.header .navbar{padding-top:24px;background:0 0;border:none}
+header.header .navbar .nav{padding-top:10px;margin-right:-30px}
 header.header .logo{width:190px;float:left;display:block;height:50px;background:url(../img/logo.png) 50% 50% no-repeat}
 .ipad{background-image:url(../img/ipad.png);background-position:100% 100%;background-repeat:no-repeat}
-h1{font-size:48px;font-family:helveticaneuecyrlight,arial,sans-serif;color:#934138}
-h3{font-size:28px;font-family:helveticaneuecyrlight,arial,sans-serif;color:#934138}
-button.fb{font-family:helveticaneuecyrlight,arial,sans-serif;color:#fff;font-size:26px;padding:10px 20px 10px 40px;position:relative;border:none;border-radius:7px;background:#3054a0;box-shadow:inset 0 0 16px #9cb7f2;display:inline-block;-webkit-transition:.3s ease;transition:.3s ease;outline:0}
+section.first{padding-bottom:40px;background:orange}
+section.first h3{margin-top:30px;line-height:35px;margin-bottom:48px;font-size:28px;font-family:helveticaneuecyrlight,arial,sans-serif;color:#934138}
+h1{font-size:48px;margin-top:87px;line-height:48px;margin-bottom:20px;font-family:helveticaneuecyrlight,arial,sans-serif;color:#934138}
+h2{font-size:42px;font-family:helveticaneuecyrlight,arial,sans-serif;color:#fff;text-align:center}
+h3{font-family:helveticaneuecyrlight,arial,sans-serif;font-size:37px;margin:40px 0}
+h3.white{color:#fff}
+h5{font-size:22px;text-align:center;font-family:helveticaneuecyrlight,arial,sans-serif}
+h5.white{color:#fff}
+p{font-family:helveticaneuecyrlight,arial,sans-serif;font-size:16px;color:#7f8c8d}
+p.white{color:#fff}
+section.second{background:#f5664b}
+section.second .features{cursor:pointer}
+section.second .features .feature p{text-align:center;-webkit-transition:.2s ease;transition:.2s ease}
+section.second .features .feature.active .icon{-webkit-transform:scale(1.2);-ms-transform:scale(1.2);transform:scale(1.2)}
+section.second .features .feature.active h5,section.second .features .feature.active p{text-shadow:1px 1px 2px rgba(0,0,0,.5)}
+section.second .features .feature:hover .icon{-webkit-transform:scale(1.2);-ms-transform:scale(1.2);transform:scale(1.2)}
+section.second .features .feature:hover h5,section.second .features .feature:hover p{text-shadow:1px 1px 2px rgba(0,0,0,.5)}
+section.second .features .feature.share.active .icon{background-position:0 -397px}
+section.second .features .feature.share .icon{background-position:0 -497px}
+section.second .features .feature.friends .icon{background-position:0 2px}
+section.second .features .feature.friends.active .icon{background-position:0 -195px}
+section.second .features .feature.poll .icon{background-position:0 -597px}
+section.second .features .feature.poll.active .icon{background-position:0 -697px}
+section.second .features .feature.repost .icon{background-position:3px -797px}
+section.second .features .feature.repost.active .icon{background-position:-3px -97px}
+section.second .features .feature.upload .icon{background-position:0 -1091px}
+section.second .features .feature.upload.active .icon{background-position:0 -996px}
+section.second .features .feature.explore.active .icon{background-position:0 -897px}
+section.second .features .feature.explore .icon{background-position:0 -297px}
+section.second .features .feature .icon{-webkit-transition:-webkit-transform .3s ease-in-out;transition:transform .3s ease-in-out;width:50px;height:50px;margin:10px auto;background:url(../img/icons.png) no-repeat}
+.iphone{width:354px;margin:auto;position:relative;height:744px;padding:80px 15px 10px;background:url(../img/iphone.png) 50% 50% no-repeat}
+.iphone.slide-6 .slider-window .canvas{top:-500%}
+.iphone.slide-5 .slider-window .canvas{top:-400%}
+.iphone.slide-4 .slider-window .canvas{top:-300%}
+.iphone.slide-3 .slider-window .canvas{top:-200%}
+.iphone.slide-2 .slider-window .canvas{top:-100%}
+.iphone.slide-1 .slider-window .canvas{top:0}
+.iphone .slider-window{background:#fff;overflow:hidden;width:326px;margin:auto;height:575px;position:relative}
+.iphone .slider-window .canvas{position:relative;-webkit-transition:1s cubic-bezier(0.35,.01,.58,.69);transition:1s cubic-bezier(0.35,.01,.58,.69);left:-1px}
+.iphone .slider-window .canvas .slide{height:575px}
+button.fb{font-family:helveticaneuecyrlight,arial,sans-serif;color:#fff;font-size:26px;padding:11px 26px 12px 85px;min-width:280px;text-align:right;position:relative;border:none;border-radius:7px;background:#3054a0;box-shadow:inset 0 0 16px #9cb7f2;display:inline-block;-webkit-transition:.3s ease;transition:.3s ease;outline:0}
 button.fb:active{box-shadow:inset 0 0 6px rgba(52,78,134,.75)}
-button.fb:after{content:'';position:absolute;width:24px;height:90%;background:url(../img/fb-icon.png) 0 50% no-repeat;top:3px;left:10px;border-right:1px solid #fff}
-.nav.default-nav li>a{color:#934138;border:2px solid transparent;border-radius:6px;padding:8px 12px;-webkit-transition:.3s linear;transition:.3s linear;font-size:17px;background:rgba(255,255,255,.5);font-family:helveticaneuecyrmedium,arial,sans-serif}
-.nav.default-nav li>a:hover{background:rgba(147,65,56,.5);color:#934138}
-.nav.default-nav li.active a{color:#934138;background:rgba(255,255,255,.5);border-color:rgba(147,65,56,.5)}
-.nav.default-nav li.active a:hover{color:#934138;background:rgba(147,65,56,.5);border-color:transparent}
+button.fb:after{content:'';position:absolute;width:64px;height:77%;background:url(../img/fb-icon.png) 23px 50% no-repeat;top:9%;left:0;border-right:1px solid #fff}
+.nav.default-nav{padding-top:34px}
+.nav.default-nav li+li{margin-left:21px}
+.nav.default-nav li>a{color:#934138;border:2px solid transparent;border-radius:6px;padding:8px 5px;text-align:center;min-width:100px;-webkit-transition:.3s linear;transition:.3s linear;font-size:17px;background:rgba(255,255,255,.35);font-family:helveticaneuecyrmedium,arial,sans-serif}
+.nav.default-nav li>a:hover{background:rgba(250,197,182,.5);color:#934138}
+.nav.default-nav li.active a{color:#934138;background:rgba(255,255,255,.35);border-color:#ff9884}
+.nav.default-nav li.active a:hover{color:#934138;background:rgba(250,197,182,.5);border-color:transparent}

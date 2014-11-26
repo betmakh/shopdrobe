@@ -1,7 +1,15 @@
 @font: arial, sans-serif;
 
 @orange: #934138;
+@nav-borders: #ff9884;
+@nav-hover: #fac5b6;
+@orange-light: #f5664b;
+@orange2: #a15045;
 
+html, html a {
+    -webkit-font-smoothing: antialiased;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
+}
 .container {
   background: yellow;
   width: 970px;
@@ -10,8 +18,13 @@
 // 1st section
 header.header{
   .navbar {
+    padding-top: 24px;
     background: transparent;
     border: none;
+    .nav {
+      padding-top: 10px;
+      margin-right: -30px;
+    }
   }
   .logo {
     width: 190px;
@@ -28,25 +41,198 @@ header.header{
   background-repeat: no-repeat;
 }
 
+section.first {
+  padding-bottom: 40px;
+  background:orange;
+  h3 {
+    margin-top: 30px;
+    line-height: 35px;
+    margin-bottom: 48px;
+    font-size: 28px;
+    font-family: 'helveticaneuecyrlight', @font;
+    color: @orange;
+  }
+}
+// headers
 h1 {
   font-size: 48px;
+  margin-top: 87px;
+  line-height: 48px;
+  margin-bottom: 20px;
   font-family: 'helveticaneuecyrlight', @font;
   color: @orange;
 }
 
+h2 {
+  font-size: 42px;
+  font-family: 'helveticaneuecyrlight', @font;
+  color: #fff;
+  text-align: center;
+}
 h3 {
-  font-size: 28px;
   font-family: 'helveticaneuecyrlight', @font;
-  color: @orange;
+  font-size: 37px;
+  margin: 40px 0;
+  &.white {
+    color: #fff;
+  }
+
+}
+h5 {
+  font-size: 22px;
+  text-align: center;
+  font-family: 'helveticaneuecyrlight', @font;
+  &.white {
+    color: #fff;
+  }
 }
 
+p {
+  font-family: 'helveticaneuecyrlight', @font;
+  font-size: 16px;
+  color: #7f8c8d;
+  &.white {
+    color: white;
+  }
+}
+// 2nd section
+section.second {
+  background: @orange-light;
+  .features {
+    cursor: pointer;
+    .feature {
+      p{
+        text-align: center;
+        transition: .2s ease;
+      }
+      &.active {
+        .icon {
+          transform: scale(1.2);
+        }
+        h5 {
+          text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5)
+        }
+        p {
+          text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5)
+        }
+      }
+      &:hover {
+        .icon {
+          transform: scale(1.2);
+        }
+        h5 {
+          text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5)
+        }
+        p {
+          text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5)
+        }
+      }
+      &.share {
+        &.active .icon {
+          background-position: 0 -397px;
+        }
+        .icon {
+          background-position: 0 -497px;
+        }
+      }
+      &.friends {
+        .icon {
+          background-position: 0 2px;
+        }
+        &.active .icon{
+          background-position: 0 -195px;
+        }
+      }
+      &.poll {
+        .icon {
+          background-position: 0 -597px;
+        }
+        &.active .icon {
+          background-position: 0 -697px;
+        }
+      }
+      &.repost {
+        .icon {
+          background-position: 3px -797px;
+        }
+        &.active .icon {
+          background-position: -3px -97px;
+        }
+      }
+      &.upload {
+        .icon {
+          background-position: 0 -1091px;
+        }
+        &.active .icon {
+          background-position: 0 -996px;
+        }
+      }
+      &.explore {
+        &.active .icon {
+          background-position: 0 -897px;
+        }
+        .icon {
+          background-position: 0 -297px;
+        }
+      }
+      .icon {
+        transition: transform .3s ease-in-out;
+        width: 50px;
+        height: 50px;
+        margin: 10px auto;
+        background: url(../img/icons.png) 0 0 no-repeat;
+      }
+    }
+  }
+}
+
+// iphone slider
+.iphone {
+  .setSlides(6);
+  @height: 744px;
+  width: 354px;
+  margin: auto;
+  position: relative;
+  height: @height;
+  padding: 80px 15px 10px;
+  background: url(../img/iphone.png) 50% 50% no-repeat;
+  .slider-window {
+    background: #000;
+    @height: 575px;
+    background: #fff;
+    overflow: hidden;
+    width: 326px;
+    margin: auto;
+    height: @height;
+    position: relative;
+    .canvas {
+      position: relative;
+      transition: 1s cubic-bezier(.35,.01,.58,.69);
+      left: -1px;
+      .slide {
+        height: @height;
+      }
+    }
+  }
+}
+
+// slider list
+.setSlides(@num) when (@num > 0) {
+  &.slide-@{num} .slider-window{
+    .canvas {
+      top: (@num - 1) * -100%;
+    }
+  }
+  .setSlides((@num - 1));
+}
 // FB button
 button.fb {
   font-family: 'helveticaneuecyrlight', @font;
   color: #fff;
   font-size: 26px;
-  padding: 10px 20px;
-  padding-left: 40px;
+  padding: 11px 26px 12px 85px;
+  min-width: 280px;
+  text-align: right;
   position: relative;
   border: none;
   border-radius: 7px;
@@ -61,39 +247,46 @@ button.fb {
   &:after {
     content: '';
     position: absolute;
-    width: 24px;
-    height: 90%;
-    background: url(../img/fb-icon.png) 0% 50% no-repeat;
-    top: 3px;
-    left: 10px;
+    width: 64px;
+    height: 77%;
+    background: url(../img/fb-icon.png) 23px 50% no-repeat;
+    top: 9%;
+    left: 0;
     border-right: 1px solid #fff;
   }
 
 }
+
 // nav
 .nav.default-nav {
+  padding-top: 34px;
   li {
+    & + li {
+      margin-left: 21px; 
+    }
     &>a {
       color: @orange;
       border: 2px solid transparent;
       border-radius: 6px;
-      padding: 8px 12px;
+      padding: 8px 5px;
+      text-align: center;
+      min-width: 100px; 
       transition: .3s linear;
       font-size: 17px;
-      background: rgba(255, 255, 255, 0.5);
+      background: rgba(255, 255, 255, 0.35);
       font-family: 'helveticaneuecyrmedium', @font;
       &:hover {
-        background: fade(@orange, 50%);
+        background: fade(@nav-hover, 50%);
         color: @orange;
       }
     }
     &.active a {
       color: @orange;
-      background: rgba(255, 255, 255, 0.5);
-      border-color: fade(@orange, 50%);
+      background: rgba(255, 255, 255, 0.35);
+      border-color: @nav-borders;
       &:hover {
         color: @orange;
-        background: fade(@orange, 50%);
+        background: fade(@nav-hover, 50%);
         border-color: transparent;
       }
     }
