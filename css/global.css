@@ -8,11 +8,14 @@ section.first{padding-bottom:40px;background:orange}
 section.first h3{margin-top:30px;line-height:35px;margin-bottom:48px;font-size:28px;font-family:helveticaneuecyrlight,arial,sans-serif;color:#934138}
 h1{font-size:48px;margin-top:87px;line-height:48px;margin-bottom:20px;font-family:helveticaneuecyrlight,arial,sans-serif;color:#934138}
 h2{font-size:42px;font-family:helveticaneuecyrlight,arial,sans-serif;color:#fff;text-align:center}
+h2.orange{color:#f5664b}
 h3{font-family:helveticaneuecyrlight,arial,sans-serif;font-size:37px;margin:40px 0}
 h3.white{color:#fff}
-h5{font-size:22px;text-align:center;font-family:helveticaneuecyrlight,arial,sans-serif}
+h3.orange{color:#f5664b}
+h5{font-size:22px;text-align:center;color:#666;font-family:helveticaneuecyrlight,arial,sans-serif}
 h5.white{color:#fff}
-p{font-family:helveticaneuecyrlight,arial,sans-serif;font-size:16px;color:#7f8c8d}
+h6{color:#000;text-align:center;font-family:helveticaneuecyrlight,arial,sans-serif;font-size:16px}
+p{font-family:helveticaneuecyrlight,arial,sans-serif;font-size:18px;color:#666}
 p.white{color:#fff}
 section.second{background:#f5664b}
 section.second .features{cursor:pointer}
@@ -44,6 +47,11 @@ section.second .features .feature .icon{-webkit-transition:-webkit-transform .3s
 .iphone .slider-window{background:#fff;overflow:hidden;width:326px;margin:auto;height:575px;position:relative}
 .iphone .slider-window .canvas{position:relative;-webkit-transition:1s cubic-bezier(0.35,.01,.58,.69);transition:1s cubic-bezier(0.35,.01,.58,.69);left:-1px}
 .iphone .slider-window .canvas .slide{height:575px}
+section.team{background:#fff}
+section.team .avatar{overflow:hidden;height:162px;width:162px;margin:auto}
+section.team .avatar:hover img{border-radius:2%}
+section.team .avatar img{width:100%;height:100%;-webkit-transition:.3s ease-in-out;transition:.3s ease-in-out;border-radius:100%}
+section.team p{font-size:16px;color:#7f8c8d}
 button.fb{font-family:helveticaneuecyrlight,arial,sans-serif;color:#fff;font-size:26px;padding:11px 26px 12px 85px;min-width:280px;text-align:right;position:relative;border:none;border-radius:7px;background:#3054a0;box-shadow:inset 0 0 16px #9cb7f2;display:inline-block;-webkit-transition:.3s ease;transition:.3s ease;outline:0}
 button.fb:active{box-shadow:inset 0 0 6px rgba(52,78,134,.75)}
 button.fb:after{content:'';position:absolute;width:64px;height:77%;background:url(../img/fb-icon.png) 23px 50% no-repeat;top:9%;left:0;border-right:1px solid #fff}

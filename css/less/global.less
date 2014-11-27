@@ -5,6 +5,8 @@
 @nav-hover: #fac5b6;
 @orange-light: #f5664b;
 @orange2: #a15045;
+@creamy: #f3ecd7;
+@gray: #666;
 
 html, html a {
     -webkit-font-smoothing: antialiased;
@@ -68,6 +70,9 @@ h2 {
   font-family: 'helveticaneuecyrlight', @font;
   color: #fff;
   text-align: center;
+  &.orange {
+    color: @orange-light;
+  }
 }
 h3 {
   font-family: 'helveticaneuecyrlight', @font;
@@ -76,21 +81,31 @@ h3 {
   &.white {
     color: #fff;
   }
+  &.orange {
+    color: @orange-light;
+  }
 
 }
 h5 {
   font-size: 22px;
   text-align: center;
+  color: @gray;
   font-family: 'helveticaneuecyrlight', @font;
   &.white {
     color: #fff;
   }
 }
+h6 {
+  color: #000;
+  text-align: center;
+  font-family: 'helveticaneuecyrlight', @font;
+  font-size: 16px;
+}
 
 p {
   font-family: 'helveticaneuecyrlight', @font;
-  font-size: 16px;
-  color: #7f8c8d;
+  font-size: 18px;
+  color: @gray;
   &.white {
     color: white;
   }
@@ -224,6 +239,32 @@ section.second {
     }
   }
   .setSlides((@num - 1));
+}
+
+// team section
+section.team {
+  background: #fff;
+  .avatar {
+    overflow: hidden;
+    height: 162px;
+    width: 162px;
+    margin: auto;
+    &:hover {
+      img {
+        border-radius: 2%;
+      }
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      transition: .3s ease-in-out;
+      border-radius: 100%;
+    }
+  }
+  p {
+    font-size: 16px;
+    color: #7f8c8d;
+  }
 }
 // FB button
 button.fb {
