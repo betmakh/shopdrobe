@@ -1,11 +1,12 @@
 html,html a{-webkit-font-smoothing:antialiased;text-shadow:1px 1px 1px rgba(0,0,0,.004)}
-.container{background:#ff0;width:970px}
+.container{width:970px}
 header.header .navbar{padding-top:24px;background:0 0;border:none}
 header.header .navbar .nav{padding-top:10px;margin-right:-30px}
 header.header .logo{width:190px;float:left;display:block;height:50px;background:url(../img/logo.png) 50% 50% no-repeat}
 .ipad{background-image:url(../img/ipad.png);background-position:100% 100%;background-repeat:no-repeat}
-section.first{padding-bottom:40px;background:orange}
+section.first{background:url(../img/section-bg/bg-1.png) 50% 50%/cover}
 section.first h3{margin-top:30px;line-height:35px;margin-bottom:48px;font-size:28px;font-family:helveticaneuecyrlight,arial,sans-serif;color:#934138}
+section.first .fb{margin-bottom:115px}
 h1{font-size:48px;margin-top:87px;line-height:48px;margin-bottom:20px;font-family:helveticaneuecyrlight,arial,sans-serif;color:#934138}
 h2{font-size:42px;font-family:helveticaneuecyrlight,arial,sans-serif;color:#fff;text-align:center}
 h2.orange{color:#f5664b}
@@ -18,8 +19,11 @@ h6{color:#000;text-align:center;font-family:helveticaneuecyrlight,arial,sans-ser
 p{font-family:helveticaneuecyrlight,arial,sans-serif;font-size:18px;color:#666}
 p.white{color:#fff}
 section.second{background:#f5664b}
+section.second h2{margin:33px auto 55px}
 section.second .features{cursor:pointer}
+section.second .features .feature+.feature{margin-top:90px}
 section.second .features .feature p{text-align:center;-webkit-transition:.2s ease;transition:.2s ease}
+section.second .features .feature h5{margin-bottom:17px}
 section.second .features .feature.active .icon{-webkit-transform:scale(1.2);-ms-transform:scale(1.2);transform:scale(1.2)}
 section.second .features .feature.active h5,section.second .features .feature.active p{text-shadow:1px 1px 2px rgba(0,0,0,.5)}
 section.second .features .feature:hover .icon{-webkit-transform:scale(1.2);-ms-transform:scale(1.2);transform:scale(1.2)}
@@ -36,7 +40,7 @@ section.second .features .feature.upload .icon{background-position:0 -1091px}
 section.second .features .feature.upload.active .icon{background-position:0 -996px}
 section.second .features .feature.explore.active .icon{background-position:0 -897px}
 section.second .features .feature.explore .icon{background-position:0 -297px}
-section.second .features .feature .icon{-webkit-transition:-webkit-transform .3s ease-in-out;transition:transform .3s ease-in-out;width:50px;height:50px;margin:10px auto;background:url(../img/icons.png) no-repeat}
+section.second .features .feature .icon{-webkit-transition:-webkit-transform .3s ease-in-out;transition:transform .3s ease-in-out;width:50px;height:50px;margin:10px auto 28px;background:url(../img/icons.png) no-repeat}
 .iphone{width:354px;margin:auto;position:relative;height:744px;padding:80px 15px 10px;background:url(../img/iphone.png) 50% 50% no-repeat}
 .iphone.slide-6 .slider-window .canvas{top:-500%}
 .iphone.slide-5 .slider-window .canvas{top:-400%}
@@ -47,14 +51,25 @@ section.second .features .feature .icon{-webkit-transition:-webkit-transform .3s
 .iphone .slider-window{background:#fff;overflow:hidden;width:326px;margin:auto;height:575px;position:relative}
 .iphone .slider-window .canvas{position:relative;-webkit-transition:1s cubic-bezier(0.35,.01,.58,.69);transition:1s cubic-bezier(0.35,.01,.58,.69);left:-1px}
 .iphone .slider-window .canvas .slide{height:575px}
+.iphone2{width:211px;height:447px;background:url(../img/iphone2.png)}
 section.team{background:#fff}
-section.team .avatar{overflow:hidden;height:162px;width:162px;margin:auto}
-section.team .avatar:hover img{border-radius:2%}
-section.team .avatar img{width:100%;height:100%;-webkit-transition:.3s ease-in-out;transition:.3s ease-in-out;border-radius:100%}
-section.team p{font-size:16px;color:#7f8c8d}
+section.team .profile{max-width:295px;margin:0 auto 50px}
+section.team .avatar{overflow:hidden;height:162px;-webkit-transition:.6s ease;transition:.6s ease;width:162px;margin:auto;border-radius:50%}
+section.team .avatar:hover{border-radius:3%}
+section.team .avatar img{width:100%;height:100%;-webkit-transition:.6s ease;transition:.6s ease}
+section.team h2{margin:35px 0 55px}
+section.team h5{margin-top:25px}
+section.team h5+h6{margin-top:13px}
+section.team p{margin-top:13px;font-size:16px;color:#7f8c8d}
+section.fourth{background:#f3ecd7;padding-bottom:40px}
+section.fourth h3{line-height:48px;margin-right:-15px;margin-bottom:30px;margin-top:35px}
+section.fourth p{line-height:29px}
+section.fourth p+button{margin-top:40px}
 button.fb{font-family:helveticaneuecyrlight,arial,sans-serif;color:#fff;font-size:26px;padding:11px 26px 12px 85px;min-width:280px;text-align:right;position:relative;border:none;border-radius:7px;background:#3054a0;box-shadow:inset 0 0 16px #9cb7f2;display:inline-block;-webkit-transition:.3s ease;transition:.3s ease;outline:0}
 button.fb:active{box-shadow:inset 0 0 6px rgba(52,78,134,.75)}
 button.fb:after{content:'';position:absolute;width:64px;height:77%;background:url(../img/fb-icon.png) 23px 50% no-repeat;top:9%;left:0;border-right:1px solid #fff}
+button.button{border-radius:6px;border:2px solid #f5664b;padding:14px 25px;color:#f5664b;font-family:helveticaneuecyrlight,arial,sans-serif;font-size:14px;outline:0;text-align:center;background:rgba(243,236,215,.5);line-height:100%;text-transform:uppercase;-webkit-transition:.3s ease;transition:.3s ease}
+button.button:active{background:rgba(245,102,75,.5);border-color:transparent}
 .nav.default-nav{padding-top:34px}
 .nav.default-nav li+li{margin-left:21px}
 .nav.default-nav li>a{color:#934138;border:2px solid transparent;border-radius:6px;padding:8px 5px;text-align:center;min-width:100px;-webkit-transition:.3s linear;transition:.3s linear;font-size:17px;background:rgba(255,255,255,.35);font-family:helveticaneuecyrmedium,arial,sans-serif}

@@ -13,7 +13,6 @@ html, html a {
     text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
 }
 .container {
-  background: yellow;
   width: 970px;
 }
 
@@ -44,8 +43,8 @@ header.header{
 }
 
 section.first {
-  padding-bottom: 40px;
-  background:orange;
+  background: url(../img/section-bg/bg-1.png) 50% 50%;
+  background-size: cover;
   h3 {
     margin-top: 30px;
     line-height: 35px;
@@ -53,6 +52,9 @@ section.first {
     font-size: 28px;
     font-family: 'helveticaneuecyrlight', @font;
     color: @orange;
+  }
+  .fb {
+    margin-bottom: 115px
   }
 }
 // headers
@@ -113,12 +115,21 @@ p {
 // 2nd section
 section.second {
   background: @orange-light;
+  h2 {
+    margin: 33px auto 55px;
+  }
   .features {
     cursor: pointer;
     .feature {
+      & + .feature {
+        margin-top: 90px;
+      }
       p{
         text-align: center;
         transition: .2s ease;
+      }
+      h5 {
+        margin-bottom: 17px;
       }
       &.active {
         .icon {
@@ -195,6 +206,7 @@ section.second {
         width: 50px;
         height: 50px;
         margin: 10px auto;
+        margin-bottom: 28px;
         background: url(../img/icons.png) 0 0 no-repeat;
       }
     }
@@ -203,8 +215,9 @@ section.second {
 
 // iphone slider
 .iphone {
-  .setSlides(6);
+  @slide-height: 575px;
   @height: 744px;
+  .setSlides(6);
   width: 354px;
   margin: auto;
   position: relative;
@@ -213,22 +226,26 @@ section.second {
   background: url(../img/iphone.png) 50% 50% no-repeat;
   .slider-window {
     background: #000;
-    @height: 575px;
     background: #fff;
     overflow: hidden;
     width: 326px;
     margin: auto;
-    height: @height;
+    height: @slide-height;
     position: relative;
     .canvas {
       position: relative;
       transition: 1s cubic-bezier(.35,.01,.58,.69);
       left: -1px;
       .slide {
-        height: @height;
+        height: @slide-height;
       }
     }
   }
+}
+.iphone2 {
+  width: 211px;
+  height: 447px;
+  background: url(../img/iphone2.png);
 }
 
 // slider list
@@ -236,6 +253,7 @@ section.second {
   &.slide-@{num} .slider-window{
     .canvas {
       top: (@num - 1) * -100%;
+      // transform: translate(0, (@num - 1) * -(@height));
     }
   }
   .setSlides((@num - 1));
@@ -244,26 +262,58 @@ section.second {
 // team section
 section.team {
   background: #fff;
+  .profile {
+    max-width: 295px;
+    margin: 0 auto 50px;
+  }
   .avatar {
     overflow: hidden;
     height: 162px;
+    transition: 0.6s ease;
     width: 162px;
     margin: auto;
+    border-radius: 50%;
     &:hover {
-      img {
-        border-radius: 2%;
-      }
+      border-radius: 3%;
     }
     img {
       width: 100%;
       height: 100%;
-      transition: .3s ease-in-out;
-      border-radius: 100%;
+      transition: 0.6s ease;
+      // border-radius: 100%;
+    }
+  }
+  h2 {
+    margin: 35px 0 55px;
+  }
+  h5 {
+    margin-top: 25px;
+    &+h6 {
+      margin-top: 13px;
     }
   }
   p {
+    margin-top: 13px;
     font-size: 16px;
     color: #7f8c8d;
+  }
+}
+
+// 4th section
+section.fourth {
+  background: @creamy;
+  padding-bottom: 40px;
+  h3 {
+    line-height: 48px;
+    margin-right: -15px;
+    margin-bottom: 30px;
+    margin-top: 35px;
+  }
+  p {
+    line-height: 29px;
+    &+button {
+      margin-top: 40px;
+    }
   }
 }
 // FB button
@@ -295,7 +345,26 @@ button.fb {
     left: 0;
     border-right: 1px solid #fff;
   }
+}
 
+// button
+button.button {
+  border-radius: 6px;
+  border: 2px solid @orange-light;
+  padding: 14px 25px;
+  color: @orange-light;
+  font-family: 'helveticaneuecyrlight', @font;
+  font-size: 14px;
+  outline: none;
+  text-align: center;
+  background: fade(@creamy, 50%);
+  line-height:100%;
+  text-transform: uppercase;
+  transition: .3s ease;
+  &:active {
+    background: fade(@orange-light, 50%);
+    border-color: transparent;
+  }
 }
 
 // nav
