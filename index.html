@@ -1,14 +1,16 @@
 <!doctype html>
 <html>
 <head>
-    <title>main page</title>
+   
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <link rel="stylesheet" type="text/css" href="css/normalize.css">
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">    
     <link rel="stylesheet" type="text/css" href="css/global.css">    
     <link rel="stylesheet" type="text/css" href="css/fonts/stylesheet.css">    
+    <link rel="stylesheet" type="text/css" href="css/jquery.pagepiling.css">    
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery.pagepiling.js"></script>
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -33,186 +35,215 @@
             </form>
         </div>
     </div> -->
-    
-    <!-- 1st section -->
-    <section class="first">
-    <!-- header -->
-        <div class="container ipad">
-            <div class="row">
-                <header class="header">
-                    <nav class="navbar navbar-default" role="navigation">
-                      <div class="container-fluid">
-                        <!-- Brand and toggle get grouped for better mobile display -->
-                        <div class="navbar-header">
-                          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-menu">
-                            <span class="sr-only">Toggle navigation</span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                          </button>
-                          <a class="logo" href="#"></a>
-                        </div>
+    <nav id="nav" class="navbar navbar-default" role="navigation">
+    <div class="container">
 
-                        <div class="collapse navbar-collapse" id="main-menu">
-                          <ul class="nav default-nav navbar-nav navbar-right">
-                            <li class="active"><a href="#">Testdrive</a></li>
-                            <li><a href="#">Our Team</a></li>
-                            <li><a href="#">B2B</a></li>
-                            <li><a href="#">Contacts</a></li>
-                          </ul>
-                        </div><!-- /.navbar-collapse -->
-                      </div><!-- /.container-fluid -->
-                    </nav>
-                </header>   
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-sm-5">
-                            <h1>Newest amazing app is coming!</h1>
-                            <h3>Some text about this application bla bla bla</h3>
-                            <div class="follow">
-                                <button class="fb">Follow us now!</button>
-                            </div>
-                        </div>
-                        <div class="col-sm-7">
-                            <div class="video">
-                               <iframe src="" width="370" height="280" frameborder="0"></iframe> 
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-menu">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="logo" href="#"></a>
         </div>
-    </section>
 
-    <!-- 2nd section -->
-    <section class="second">
-        <div class="container">
-            <div class="clearfix">
-                <ul class="nav default-nav navbar-right nav-pills">
-                    <li class="active"><a href="#">Testdrive</a></li>
-                    <li><a href="#">Our Team</a></li>
-                    <li><a href="#">B2B</a></li>
-                    <li><a href="#">Contacts</a></li>
-                </ul>
-            </div>
-            <h2>How it works?</h2>
-            <div class="row">
-                <div class="col-sm-3 features">
-                    <div class="feature active share">
-                        <div class="icon"></div>
-                        <h5 class="white">Share photos</h5>
-                        <p class="white">Post the items you bought or consider buying</p>
-                    </div>
-                    <div class="feature upload">
-                        <div class="icon"></div>
-                        <h5 class="white">Upload looks</h5>
-                        <p class="white">Share your everyday LOOKS with everyone</p>
-                    </div>
-                    <div class="feature explore">
-                        <div class="icon"></div>
-                        <h5 class="white">Explore</h5>
-                        <p class="white">Simply browse what other people wear</p>
-                    </div>
-                </div>
-                <div class="col-sm-6">
-                    <div class="iphone slide-1">
-                        <div class="slider-window">
-                            <div class="canvas">
-                                <div class="slide">
-                                    <img src="../img/pic.png" alt="">
+        <div class="collapse navbar-collapse" id="main-menu">
+          <ul class="nav default-nav navbar-nav navbar-right">
+            <li data-menuanchor="page1" class="active"><a href="#page1">Testdrive</a></li>
+            <li data-menuanchor="page2"><a href="#page2">Our Team</a></li>
+            <li data-menuanchor="page3"><a href="#page3">B2B</a></li>
+            <li data-menuanchor="page4"><a href="#page4">Contacts</a></li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </div>
+      
+    </nav>
+    <div id="pagepiling">
+        <!-- 1st section -->
+        <section id="first" class="section first">
+        <!-- header -->
+            <div class="container ipad">
+                <div class="row">
+                    <header class="header">
+                        
+                    </header>   
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-sm-5">
+                                <h1>Newest amazing app is coming!</h1>
+                                <h3>Some text about this application bla bla bla</h3>
+                                <div class="follow">
+                                    <div class="fb-follow" data-href="https://www.facebook.com/shopdrobe" data-colorscheme="light" data-layout="button" data-show-faces="true"></div>
+                                    <button class="fb">Follow us now!</button>
                                 </div>
-                                <div class="slide"><img src="../img/pic.png" alt=""></div>
-                                <div class="slide"></div>
-                                <div class="slide"><img src="../img/pic.png" alt=""></div>
-                                <div class="slide"></div>
-                                <div class="slide"><img src="../img/pic.png" alt=""></div>
+                            </div>
+                            <div class="col-sm-7">
+                                <div class="video">
+                                   <iframe src="" width="370" height="280" frameborder="0"></iframe> 
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-3 features">
-                    <div class="feature poll">
-                        <div class="icon"></div>
-                        <h5 class="white">Create polls</h5>
-                        <p class="white">Cannot choose between two items? Ask your friends!</p>
-                    </div>
-                    <div class="feature friends">
-                        <div class="icon"></div>
-                        <h5 class="white">Advice your friends</h5>
-                        <p class="white">Rate their items or looks and earn advisor points!</p>
-                    </div>
-                    <div class="feature repost">
-                        <div class="icon"></div>
-                        <h5 class="white">Re-Post</h5>
-                        <p class="white">Forward your "shopping news" on the social media</p>
-                    </div>
-                </div>
             </div>
-            <h3 class="white text-center">And more!</h3>
-        </div>
-    </section>
+        </section>
 
-    <!-- 3rd section -->
-    <section class="team">
-        <div class="container">
-            <div class="clearfix">
-                <ul class="nav default-nav navbar-right nav-pills">
-                    <li class="active"><a href="#">Testdrive</a></li>
-                    <li><a href="#">Our Team</a></li>
-                    <li><a href="#">B2B</a></li>
-                    <li><a href="#">Contacts</a></li>
-                </ul>
-            </div>
-            <h2 class="orange">Startup Team</h2>
-            <div class="row">
-                <div class="col-xs-5 text-center col-xs-offset-1">
-                    <div class="profile">
-                        <div class="avatar">
-                            <img src="img/ava.png" alt="Photo">
+        <!-- 2nd section -->
+        <section id="second" class="section second">
+            <div class="container">
+                <div class="clearfix">
+                    <!-- <ul class="nav default-nav navbar-right nav-pills">
+                        <li class="active"><a href="#first">Testdrive</a></li>
+                        <li><a href="#third">Our Team</a></li>
+                        <li><a href="#">B2B</a></li>
+                        <li><a href="#">Contacts</a></li>
+                    </ul> -->
+                </div>
+                <h2>How it works?</h2>
+                <div class="row">
+                    <div class="col-sm-3 features">
+                        <div class="feature active share">
+                            <div class="icon"></div>
+                            <h5 class="white">Share photos</h5>
+                            <p class="white">Post the items you bought or consider buying</p>
                         </div>
-                        <h5>Matthieu Rigolot</h5>
-                        <h6>SEO</h6>
-                        <p class="text-center">Matthieu leads the business development and the product development of Dare To as the Director. He is a enthusiast</p>
+                        <div class="feature upload">
+                            <div class="icon"></div>
+                            <h5 class="white">Upload looks</h5>
+                            <p class="white">Share your everyday LOOKS with everyone</p>
+                        </div>
+                        <div class="feature explore">
+                            <div class="icon"></div>
+                            <h5 class="white">Explore</h5>
+                            <p class="white">Simply browse what other people wear</p>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="iphone slide-1">
+                            <div class="slider-window">
+                                <div class="canvas">
+                                    <div class="slide">
+                                        <img src="../img/pic.png" alt="">
+                                    </div>
+                                    <div class="slide"><img src="../img/pic.png" alt=""></div>
+                                    <div class="slide"></div>
+                                    <div class="slide"><img src="../img/pic.png" alt=""></div>
+                                    <div class="slide"></div>
+                                    <div class="slide"><img src="../img/pic.png" alt=""></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3 features">
+                        <div class="feature poll">
+                            <div class="icon"></div>
+                            <h5 class="white">Create polls</h5>
+                            <p class="white">Cannot choose between two items? Ask your friends!</p>
+                        </div>
+                        <div class="feature friends">
+                            <div class="icon"></div>
+                            <h5 class="white">Advice your friends</h5>
+                            <p class="white">Rate their items or looks and earn advisor points!</p>
+                        </div>
+                        <div class="feature repost">
+                            <div class="icon"></div>
+                            <h5 class="white">Re-Post</h5>
+                            <p class="white">Forward your "shopping news" on the social media</p>
+                        </div>
                     </div>
                 </div>
-                <div class="col-xs-5 text-center">
-                    <div class="profile">
-                        <div class="avatar">
-                            <img src="img/ava.jpeg" alt="Photo">
-                        </div>
-                        <h5>Matthieu Rigolot</h5>
-                        <h6>Lead Developer</h6>
-                        <p class="text-center">Matthieu leads the business development and the product development of Dare To as the Director. He is a enthusiast</p>
-                    </div>
-                </div>
+                <h3 class="white text-center">And more!</h3>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- 4th section -->
-    <section class="fourth">
-        <div class="container">
-            <div class="clearfix">
-                <ul class="nav default-nav navbar-right nav-pills">
-                    <li class="active"><a href="#">Testdrive</a></li>
-                    <li><a href="#">Our Team</a></li>
-                    <li><a href="#">B2B</a></li>
-                    <li><a href="#">Contacts</a></li>
-                </ul>
-            </div>
-            <div class="row">
-                <div class="col-sm-3">
-                    <div class="iphone2"></div>
+        <!-- 3rd section -->
+        <section id="third" class="section team">
+            <div class="container">
+                <div class="clearfix">
+                    <!-- <ul class="nav default-nav navbar-right nav-pills">
+                        <li class="active"><a href="#">Testdrive</a></li>
+                        <li><a href="#">Our Team</a></li>
+                        <li><a href="#">B2B</a></li>
+                        <li><a href="#">Contacts</a></li>
+                    </ul> -->
                 </div>
-                <div class="col-sm-8 col-xs-offset-1">
-                    <h3 class="orange">Clinkle has no overdraft fees, oad funds from your bank account, and no fee to use load funds from your bank account, and no fee to use</h3>
-                    <p>There are some cases in which we do charge fees, like if  You can read more about the few fees we do charge in our Cardholder Agreement.you request a paper statement. You can read more about Cardholder Agreement.</p>
-                    <button class="button upper">contact us</button>
+                <h2 class="orange">Startup Team</h2>
+                <div class="row">
+                    <div class="col-xs-5 text-center col-xs-offset-1">
+                        <div class="profile">
+                            <div class="avatar">
+                                <img src="img/ava.png" alt="Photo">
+                            </div>
+                            <h5>Matthieu Rigolot</h5>
+                            <h6>SEO</h6>
+                            <p class="text-center">Matthieu leads the business development and the product development of Dare To as the Director. He is a enthusiast</p>
+                        </div>
+                    </div>
+                    <div class="col-xs-5 text-center">
+                        <div class="profile">
+                            <div class="avatar">
+                                <img src="img/ava.jpeg" alt="Photo">
+                            </div>
+                            <h5>Matthieu Rigolot</h5>
+                            <h6>Lead Developer</h6>
+                            <p class="text-center">Matthieu leads the business development and the product development of Dare To as the Director. He is a enthusiast</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-5 text-center col-xs-offset-1">
+                        <div class="profile">
+                            <div class="avatar">
+                                <img src="img/ava.png" alt="Photo">
+                            </div>
+                            <h5>Matthieu Rigolot</h5>
+                            <h6>SEO</h6>
+                            <p class="text-center">Matthieu leads the business development and the product development of Dare To as the Director. He is a enthusiast</p>
+                        </div>
+                    </div>
+                    <div class="col-xs-5 text-center">
+                        <div class="profile">
+                            <div class="avatar">
+                                <img src="img/ava.jpeg" alt="Photo">
+                            </div>
+                            <h5>Matthieu Rigolot</h5>
+                            <h6>Lead Developer</h6>
+                            <p class="text-center">Matthieu leads the business development and the product development of Dare To as the Director. He is a enthusiast</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- 4th section -->
+        <section id="fourth" class="section fourth">
+            <div class="container">
+                <div class="clearfix">
+                   <!--  <ul class="nav default-nav navbar-right nav-pills">
+                        <li class="active"><a href="#">Testdrive</a></li>
+                        <li><a href="#">Our Team</a></li>
+                        <li><a href="#">B2B</a></li>
+                        <li><a href="#">Contacts</a></li>
+                    </ul> -->
+                </div>
+                <div class="row">
+                    <div class="col-sm-3">
+                        <div class="iphone2"></div>
+                    </div>
+                    <div class="col-sm-8 col-xs-offset-1">
+                        <h3 class="orange">Clinkle has no overdraft fees, oad funds from your bank account, and no fee to use load funds from your bank account, and no fee to use</h3>
+                        <p>There are some cases in which we do charge fees, like if  You can read more about the few fees we do charge in our Cardholder Agreement.you request a paper statement. You can read more about Cardholder Agreement.</p>
+                        <button class="button upper">contact us</button>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
-    
+        </section>
+    </div>
 </body>
 </html>
 
