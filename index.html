@@ -22,7 +22,36 @@
 <body>
     <!-- time for timer -->
     <div id="date" style="display:none;">11 November 2014 10:12</div>
-
+    <div class="modal fade contact" id="contactUs" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog"> 
+        <div class="modal-content">
+          <div class="modal-body">
+            <h5>Have questions? Contact with us!</h5>
+            <form action="post" name="contact">
+            <label>
+                *Email address:
+                <input class="valid" placeholder="*Email address" id="mail" type="email">
+            </label>
+            <label>
+                Subject:
+                <input type="text" class="invalid" placeholder="Subject" id="subject">
+            </label>
+            <label>
+                *Message:
+                <textarea placeholder="*Message"></textarea>
+            </label>
+                <!-- <label for="mail"><sup>*</sup>Email address:</label>
+                <input id="mail" type="email">
+                <label for="subject">Subject:</label>
+                <input type="text" id="subject">
+                <label for="message"><sup>*</sup>Message:</label> -->
+            <button type="submit">Send</button>
+            </form>
+            <div class="text-center"><span>Fields marked with* are mandatory</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
     <!-- popup -->
   <!--   <div class="popup-wrapper">
         <div class="popup">
@@ -68,9 +97,6 @@
         <!-- header -->
             <div class="container ipad">
                 <div class="row">
-                    <header class="header">
-                        
-                    </header>   
                     <div class="container-fluid">
                         <div class="row">
                             <div class="col-sm-5">
@@ -129,7 +155,7 @@
                                     <div class="slide">
                                         <img src="../img/pic.png" alt="">
                                     </div>
-                                    <div class="slide"><img src="../img/pic.png" alt=""></div>
+                                    <div class="slide"><img src="../img/sliderpic.png" alt=""></div>
                                     <div class="slide"></div>
                                     <div class="slide"><img src="../img/pic.png" alt=""></div>
                                     <div class="slide"></div>
@@ -238,7 +264,7 @@
                     <div class="col-sm-8 col-xs-offset-1">
                         <h3 class="orange">Clinkle has no overdraft fees, oad funds from your bank account, and no fee to use load funds from your bank account, and no fee to use</h3>
                         <p>There are some cases in which we do charge fees, like if  You can read more about the few fees we do charge in our Cardholder Agreement.you request a paper statement. You can read more about Cardholder Agreement.</p>
-                        <button class="button upper">contact us</button>
+                        <button data-toggle="modal" data-target="#contactUs" class="button upper">contact us</button>
                     </div>
                 </div>
             </div>
