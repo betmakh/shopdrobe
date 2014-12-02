@@ -1,9 +1,4 @@
-
-
-  $(document).ready(function() {
-      
-});
-    
+ 
 $(function() {
   var features = [];
   $('.features .feature').click(function(event) {
@@ -47,6 +42,7 @@ $(function() {
   $('#pagepiling').pagepiling({
     menu: '#nav',
     anchors: ['page1', 'page2', 'page3', 'page4'],
+    verticalCentered: false,
     navigation: {
       'textColor': '#f2f2f2',
       'bulletsColor': '#ccc',

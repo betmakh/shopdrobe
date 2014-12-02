@@ -2,10 +2,13 @@ html,html a{-webkit-font-smoothing:antialiased;text-shadow:1px 1px 1px rgba(0,0,
 body,html{height:100%}
 .container{width:970px}
 section{overflow:auto;padding-top:40px;padding-bottom:40px}
-.ipad{background-image:url(../img/ipad.png);background-position:100% 100%;background-repeat:no-repeat}
+section.section{overflow:hidden}
+section.section.first{padding:0}
+.ipad{background-image:url(../img/ipad.png);position:absolute;background-repeat:no-repeat;min-height:435px;min-width:830px;right:-160px;padding-top:20px;padding-left:225px;bottom:0}
 section.first{background:url(../img/section-bg/bg-1.png) 50% 50%/cover}
-section.first h3{margin-top:30px;line-height:35px;margin-bottom:48px;font-size:28px;font-family:helveticaneuecyrlight,arial,sans-serif;color:#934138}
-section.first .fb{margin:10vh 0}
+section.first .container{height:100%;position:relative;padding-top:20vh}
+section.first h3{margin-top:5vh;line-height:35px;margin-bottom:48px;font-size:28px;font-family:helveticaneuecyrlight,arial,sans-serif;color:#934138}
+section.first .fb{margin:7vh 0}
 section.first .fb .fb-follow{position:absolute;opacity:0}
 h1{font-size:48px;margin-top:87px;line-height:48px;margin-bottom:20px;font-family:helveticaneuecyrlight,arial,sans-serif;color:#934138}
 h2{font-size:42px;font-family:helveticaneuecyrlight,arial,sans-serif;color:#fff;text-align:center}
@@ -20,11 +23,14 @@ p{font-family:helveticaneuecyrlight,arial,sans-serif;font-size:18px;color:#666}
 p.white{color:#fff}
 section.second{background:#f5664b}
 section.second h2{margin:33px auto 20px}
-section.second h3{margin-top:20px}
+section.second h3{margin-top:2vh}
 section.second .features{cursor:pointer}
-section.second .features .feature+.feature{margin-top:90px}
+@media (min-height:940px){section.second .features{padding-top:1vh}}
+section.second .features .feature+.feature{margin-top:6vh}
 section.second .features .feature p{text-align:center;-webkit-transition:.2s ease;transition:.2s ease}
-section.second .features .feature h5{margin-bottom:17px}
+@media (max-height:940px){section.second .features .feature p{font-size:16px}}
+section.second .features .feature h5{margin-bottom:1.5vh}
+@media (max-height:940px){section.second .features .feature h5{margin-bottom:1vh}}
 section.second .features .feature.active .icon{-webkit-transform:scale(1.2);-ms-transform:scale(1.2);transform:scale(1.2)}
 section.second .features .feature.active h5,section.second .features .feature.active p{text-shadow:1px 1px 2px rgba(0,0,0,.5)}
 section.second .features .feature:hover .icon{-webkit-transform:scale(1.2);-ms-transform:scale(1.2);transform:scale(1.2)}
@@ -41,7 +47,7 @@ section.second .features .feature.upload .icon{background-position:0 -1091px}
 section.second .features .feature.upload.active .icon{background-position:0 -996px}
 section.second .features .feature.explore.active .icon{background-position:0 -897px}
 section.second .features .feature.explore .icon{background-position:0 -297px}
-section.second .features .feature .icon{-webkit-transition:-webkit-transform .3s ease-in-out;transition:transform .3s ease-in-out;width:50px;height:50px;margin:10px auto 28px;background:url(../img/icons.png) no-repeat}
+section.second .features .feature .icon{-webkit-transition:-webkit-transform .3s ease-in-out;transition:transform .3s ease-in-out;width:50px;height:50px;margin:10px auto 2vh;background:url(../img/icons.png) no-repeat}
 .iphone{width:354px;margin:auto;position:relative;height:744px;padding:80px 15px 10px;background:url(../img/iphone.png) 50% 50% no-repeat}
 .iphone.slide-6 .slider-window .canvas{-webkit-transform:translate3d(0px,-2875px,0);transform:translate3d(0px,-2875px,0)}
 .iphone.slide-5 .slider-window .canvas{-webkit-transform:translate3d(0px,-2300px,0);transform:translate3d(0px,-2300px,0)}
@@ -49,19 +55,28 @@ section.second .features .feature .icon{-webkit-transition:-webkit-transform .3s
 .iphone.slide-3 .slider-window .canvas{-webkit-transform:translate3d(0px,-1150px,0);transform:translate3d(0px,-1150px,0)}
 .iphone.slide-2 .slider-window .canvas{-webkit-transform:translate3d(0px,-575px,0);transform:translate3d(0px,-575px,0)}
 .iphone.slide-1 .slider-window .canvas{-webkit-transform:translate3d(0px,0,0);transform:translate3d(0px,0,0)}
-.iphone .slider-window{background:#fff;overflow:hidden;width:326px;margin:auto;height:575px;position:relative}
-.iphone .slider-window .canvas{position:relative;-webkit-transition:1s cubic-bezier(0.35,.01,.58,.69);transition:1s cubic-bezier(0.35,.01,.58,.69);left:-1px}
+@media (max-height:940px){.iphone{margin-top:50px;background-position:50% 0;background-size:contain;width:200px;height:544px;padding-top:50px}}
+.iphone .slider-window{background:#000;overflow:hidden;width:326px;margin:auto;height:575px;position:relative}
+@media (max-height:940px){.iphone .slider-window{width:172px;height:303px}}
+.iphone .slider-window .canvas{width:100%;position:relative;-webkit-transition:1s cubic-bezier(0.35,.01,.58,.69);transition:1s cubic-bezier(0.35,.01,.58,.69)}
 .iphone .slider-window .canvas .slide{height:575px}
+.iphone .slider-window .canvas .slide img{width:100%;display:block;max-height:100%;margin:auto}
+@media (max-height:940px){.iphone .slider-window .canvas .slide{height:303px}}
 .iphone2{width:211px;height:447px;background:url(../img/iphone2.png)}
 section.team{background:#fff}
-section.team .profile{max-width:295px;margin:0 auto 50px}
+section.team .profile{max-width:295px;margin:0 auto 5vh}
+@media (max-height:940px){section.team .profile{margin-bottom:0}}
 section.team .avatar{overflow:hidden;height:162px;-webkit-transition:.6s ease;transition:.6s ease;width:162px;margin:auto;border-radius:50%}
+@media (max-height:940px){section.team .avatar{width:120px;height:120px}}
 section.team .avatar:hover{border-radius:3%}
 section.team .avatar img{width:100%;height:100%;-webkit-transition:.6s ease;transition:.6s ease}
-section.team h2{margin:35px 0 55px}
+section.team h2{margin:3vh 0 5vh}
 section.team h5{margin-top:25px}
+@media (max-height:940px){section.team h5{margin-top:10px}}
 section.team h5+h6{margin-top:13px}
+@media (max-height:940px){section.team h5+h6{margin-top:0}}
 section.team p{margin-top:13px;font-size:16px;color:#7f8c8d}
+@media (max-height:940px){section.team p{font-size:14px;line-height:15px;margin-top:0}}
 section.fourth{background:#f3ecd7;padding-bottom:40px}
 section.fourth>.container>.row{margin-top:20vh}
 section.fourth h3{line-height:48px;margin-right:-15px;margin-bottom:30px;margin-top:35px}

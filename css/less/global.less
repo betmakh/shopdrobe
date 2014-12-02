@@ -28,6 +28,8 @@
 @green: #7aca7a;
 @red: #f89898;
 
+@width: 970px;
+
 html, html a {
     -webkit-font-smoothing: antialiased;
     text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
@@ -36,33 +38,52 @@ html, body {
   height: 100%;
 }
 .container {
-  width: 970px;
+  width: @width;
 }
 section {
   // height: 100%;
   // position: relative;
   overflow: auto;
   padding-top: 40px;
-  padding-bottom: 40px
+  padding-bottom: 40px;
+  &.section {
+    // display: table-cell;
+    // height: 100%;
+    // vertical-align: middle;
+    overflow: hidden;
+    &.first {
+      padding: 0;
+    }
+  }
 }
 // 1st section
 
-header.header{
-  
-  
-}
 
-.ipad {
-  background-image: url(../img/ipad.png);
-  background-position: 100% 100%;
-  background-repeat: no-repeat;
-}
+
+  .ipad {
+    background-image: url(../img/ipad.png);
+    position: absolute;
+    background-repeat: no-repeat;
+    min-height: 435px;
+    min-width: 830px;
+    right: -160px;
+    padding-top: 20px;
+    padding-left: 225px;
+    bottom: 0;
+  }
+
+
 
 section.first {
   background: url(../img/section-bg/bg-1.png) 50% 50%;
   background-size: cover;
+  .container {
+    height: 100%;
+    position: relative;
+    padding-top: 20vh;
+  }
   h3 {
-    margin-top: 30px;
+    margin-top: 5vh;
     line-height: 35px;
     margin-bottom: 48px;
     font-size: 28px;
@@ -70,7 +91,7 @@ section.first {
     color: @orange;
   }
   .fb {
-    margin: 10vh 0;
+    margin: 7vh 0;
     .fb-follow {
       position: absolute;
       opacity: 0;
@@ -139,20 +160,30 @@ section.second {
     margin: 33px auto 20px;
   }
   h3 {
-    margin-top: 20px;
+    margin-top: 2vh;
   }
   .features {
+    @media (min-height:940px) {
+      padding-top: 1vh;
+    }
     cursor: pointer;
+
     .feature {
       & + .feature {
-        margin-top: 90px;
+        margin-top: 6vh;
       }
       p{
         text-align: center;
         transition: .2s ease;
+        @media(max-height: 940px) {
+          font-size: 16px;
+        }
       }
       h5 {
-        margin-bottom: 17px;
+        @media(max-height: 940px) {
+          margin-bottom: 1vh;
+        }
+        margin-bottom: 1.5vh;
       }
       &.active {
         .icon {
@@ -229,7 +260,7 @@ section.second {
         width: 50px;
         height: 50px;
         margin: 10px auto;
-        margin-bottom: 28px;
+        margin-bottom: 2vh;
         background: url(../img/icons.png) 0 0 no-repeat;
       }
     }
@@ -247,24 +278,53 @@ section.second {
   height: @height;
   padding: 80px 15px 10px;
   background: url(../img/iphone.png) 50% 50% no-repeat;
+  @media(max-height: 940px) {
+    @slide-height: 375px;
+    // .setSlides(6);
+    margin-top: 50px;
+    @height: 544px;
+    background-position: 50% 0;
+    background-size: contain;
+    width: 200px;
+    height: @height;
+    padding-top: 50px;
+    
+  }
   .slider-window {
+    @media(max-height: 940px) {
+      width: 172px;
+      height: 303px;
+    }
+
     background: #000;
-    background: #fff;
     overflow: hidden;
     width: 326px;
     margin: auto;
     height: @slide-height;
     position: relative;
     .canvas {
+      width: 100%;
       position: relative;
       transition: 1s cubic-bezier(.35,.01,.58,.69);
-      left: -1px;
+      // left: 1px;
       .slide {
+        img {
+          width: 100%;
+          display: block;
+          max-height: 100%;
+          // height: 100%;
+          margin: auto;
+        }
+        @media(max-height: 940px) {
+          height: 303px;
+        }
         height: @slide-height;
       }
     }
   }
 }
+
+// not-slider
 .iphone2 {
   width: 211px;
   height: 447px;
@@ -287,7 +347,11 @@ section.team {
   background: #fff;
   .profile {
     max-width: 295px;
-    margin: 0 auto 50px;
+    margin: 0 auto 5vh;
+    @media (max-height: 940px) {
+      margin-bottom: 0;
+      // width: 200px;
+    }
   }
   .avatar {
     overflow: hidden;
@@ -296,6 +360,10 @@ section.team {
     width: 162px;
     margin: auto;
     border-radius: 50%;
+    @media (max-height: 940px) {
+      width: 120px;
+      height: 120px;
+    }
     &:hover {
       border-radius: 3%;
     }
@@ -307,11 +375,17 @@ section.team {
     }
   }
   h2 {
-    margin: 35px 0 55px;
+    margin: 3vh 0 5vh;
   }
   h5 {
+    @media (max-height: 940px) {
+      margin-top: 10px;
+    }
     margin-top: 25px;
     &+h6 {
+      @media (max-height: 940px) {
+        margin-top: 0;
+      }
       margin-top: 13px;
     }
   }
@@ -319,6 +393,11 @@ section.team {
     margin-top: 13px;
     font-size: 16px;
     color: #7f8c8d;
+    @media (max-height: 940px) {
+      font-size: 14px;
+      line-height: 15px;
+      margin-top: 0px;
+    }
   }
 }
 
