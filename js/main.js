@@ -43,12 +43,13 @@ $(function() {
     menu: '#nav',
     anchors: ['page1', 'page2', 'page3', 'page4'],
     verticalCentered: false,
-    navigation: {
-      'textColor': '#f2f2f2',
-      'bulletsColor': '#ccc',
-      'position': 'right',
-      'tooltips': ['Page 1', 'Page 2', 'Page 3', 'Page 4']
-    },
+    // navigation: {
+    //   'textColor': '#f2f2f2',
+    //   'bulletsColor': '#ccc',
+    //   'position': 'right',
+    //   'tooltips': ['Page 1', 'Page 2', 'Page 3', 'Page 4']
+    // },
+    navigation: false, 
     afterLoad: function(anchorLink, index){
       if(anchorLink == 'page1'){
           $('#nav').find('.logo').css('opacity', '1');
@@ -57,18 +58,6 @@ $(function() {
       }
     }
   });
-  // setTimeout(sliderInit, 1000);
-  // sliderInit();
-  
-//   $('.features .feature').each(function(index, el) {
-//     features[index] = el;
-//     $(el).on('click', function () {
-//       $(this).closest('section').find('.iphone').attr('class', 'iphone slide-' + (++index));
-//       console.log(features);
-//       $('.features .feature').removeClass('active')
-//       $(this).addClass('active');
-//     }) 
-//   });
 });
 
 function sliderInit() {

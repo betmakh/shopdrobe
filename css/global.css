@@ -22,7 +22,7 @@ h6{color:#000;text-align:center;font-family:helveticaneuecyrlight,arial,sans-ser
 p{font-family:helveticaneuecyrlight,arial,sans-serif;font-size:18px;color:#666}
 p.white{color:#fff}
 section.second{background:#f5664b}
-section.second h2{margin:33px auto 20px}
+section.second h2{margin:45px auto 20px}
 section.second h3{margin-top:2vh}
 section.second .features{cursor:pointer}
 @media (min-height:940px){section.second .features{padding-top:1vh}}
@@ -55,28 +55,39 @@ section.second .features .feature .icon{-webkit-transition:-webkit-transform .3s
 .iphone.slide-3 .slider-window .canvas{-webkit-transform:translate3d(0px,-1150px,0);transform:translate3d(0px,-1150px,0)}
 .iphone.slide-2 .slider-window .canvas{-webkit-transform:translate3d(0px,-575px,0);transform:translate3d(0px,-575px,0)}
 .iphone.slide-1 .slider-window .canvas{-webkit-transform:translate3d(0px,0,0);transform:translate3d(0px,0,0)}
-@media (max-height:940px){.iphone{margin-top:50px;background-position:50% 0;background-size:contain;width:200px;height:544px;padding-top:50px}}
 .iphone .slider-window{background:#000;overflow:hidden;width:326px;margin:auto;height:575px;position:relative}
-@media (max-height:940px){.iphone .slider-window{width:172px;height:303px}}
-.iphone .slider-window .canvas{width:100%;position:relative;-webkit-transition:1s cubic-bezier(0.35,.01,.58,.69);transition:1s cubic-bezier(0.35,.01,.58,.69)}
+.iphone .slider-window .canvas{width:100%;position:relative;-webkit-transition:1s cubic-bezier(0.35,.01,.58,.69);transition:1s cubic-bezier(0.35,.01,.58,.69);left:1px}
 .iphone .slider-window .canvas .slide{height:575px}
 .iphone .slider-window .canvas .slide img{width:100%;display:block;max-height:100%;margin:auto}
-@media (max-height:940px){.iphone .slider-window .canvas .slide{height:303px}}
+@media (max-height:940px){.iphone{background-position:50% 0;background-size:contain;width:230px;height:470px;padding-top:57px}
+.iphone.slide-6 .slider-window .canvas{-webkit-transform:translate3d(0px,-1750px,0);transform:translate3d(0px,-1750px,0)}
+.iphone.slide-5 .slider-window .canvas{-webkit-transform:translate3d(0px,-1400px,0);transform:translate3d(0px,-1400px,0)}
+.iphone.slide-4 .slider-window .canvas{-webkit-transform:translate3d(0px,-1050px,0);transform:translate3d(0px,-1050px,0)}
+.iphone.slide-3 .slider-window .canvas{-webkit-transform:translate3d(0px,-700px,0);transform:translate3d(0px,-700px,0)}
+.iphone.slide-2 .slider-window .canvas{-webkit-transform:translate3d(0px,-350px,0);transform:translate3d(0px,-350px,0)}
+.iphone.slide-1 .slider-window .canvas{-webkit-transform:translate3d(0px,0,0);transform:translate3d(0px,0,0)}
+.iphone .slider-window{left:1px;position:relative;width:197px;height:350px}
+.iphone .slider-window .canvas .slide{height:350px}
+section.second h2{margin-bottom:10px;margin-top:40px}
+section.second h3{margin-top:0}
+section.second .features:last-of-type .feature{right:30px;left:auto}
+section.second .features .feature{position:relative;left:30px}}
 .iphone2{width:211px;height:447px;background:url(../img/iphone2.png)}
 section.team{background:#fff}
 section.team .profile{max-width:295px;margin:0 auto 5vh}
-@media (max-height:940px){section.team .profile{margin-bottom:0}}
 section.team .avatar{overflow:hidden;height:162px;-webkit-transition:.6s ease;transition:.6s ease;width:162px;margin:auto;border-radius:50%}
 @media (max-height:940px){section.team .avatar{width:120px;height:120px}}
 section.team .avatar:hover{border-radius:3%}
 section.team .avatar img{width:100%;height:100%;-webkit-transition:.6s ease;transition:.6s ease}
-section.team h2{margin:3vh 0 5vh}
+section.team h2{margin:5vh 0 3vh}
 section.team h5{margin-top:25px}
 @media (max-height:940px){section.team h5{margin-top:10px}}
 section.team h5+h6{margin-top:13px}
 @media (max-height:940px){section.team h5+h6{margin-top:0}}
 section.team p{margin-top:13px;font-size:16px;color:#7f8c8d}
 @media (max-height:940px){section.team p{font-size:14px;line-height:15px;margin-top:0}}
+@media (max-height:940px){section.team .profile{margin-bottom:0}
+section.team .avatar{width:120px;height:120px}}
 section.fourth{background:#f3ecd7;padding-bottom:40px}
 section.fourth>.container>.row{margin-top:20vh}
 section.fourth h3{line-height:48px;margin-right:-15px;margin-bottom:30px;margin-top:35px}

@@ -1,5 +1,10 @@
 // @import: 'myPerfectMixins';
 
+.media(@max-height, @rules) {
+  @media (max-height: @max-height) {
+    @rules();
+  }
+}
 .placeholder(@rules) {
 
     &::-webkit-input-placeholder {
@@ -157,7 +162,7 @@ p {
 section.second {
   background: @orange-light;
   h2 {
-    margin: 33px auto 20px;
+    margin: 45px auto 20px;
   }
   h3 {
     margin-top: 2vh;
@@ -266,36 +271,17 @@ section.second {
     }
   }
 }
-
-// iphone slider
 .iphone {
   @slide-height: 575px;
   @height: 744px;
-  .setSlides(6);
+  .setSlides(6, @slide-height);
   width: 354px;
   margin: auto;
   position: relative;
   height: @height;
   padding: 80px 15px 10px;
   background: url(../img/iphone.png) 50% 50% no-repeat;
-  @media(max-height: 940px) {
-    @slide-height: 375px;
-    // .setSlides(6);
-    margin-top: 50px;
-    @height: 544px;
-    background-position: 50% 0;
-    background-size: contain;
-    width: 200px;
-    height: @height;
-    padding-top: 50px;
-    
-  }
   .slider-window {
-    @media(max-height: 940px) {
-      width: 172px;
-      height: 303px;
-    }
-
     background: #000;
     overflow: hidden;
     width: 326px;
@@ -306,25 +292,72 @@ section.second {
       width: 100%;
       position: relative;
       transition: 1s cubic-bezier(.35,.01,.58,.69);
-      // left: 1px;
+      left: 1px;
       .slide {
+        height: @slide-height;
+        // transition: 1s cubic-bezier(.35,.01,.58,.69);
+        // position: absolute;
+        // transform: translate3d(100%, 0, 0);
+        // z-index: 2;
         img {
           width: 100%;
           display: block;
           max-height: 100%;
-          // height: 100%;
           margin: auto;
         }
-        @media(max-height: 940px) {
-          height: 303px;
-        }
-        height: @slide-height;
       }
     }
   }
 }
+// iphone slider
+.media(940px, {
+  .iphone {
+    @slide-height: 350px;
+    @slide-width: 197px;
+    @height: 470px;
+    .setSlides(6, @slide-height);
+    background-position: 50% 0;
+    background-size: contain;
+    width: 230px;
+    height: @height;
+    padding-top: 57px;
+    .slider-window {
+      left: 1px;
+      position: relative;
+      width:  @slide-width;
+      height: @slide-height;
+      .canvas {
+        .slide {
+          height: @slide-height;
+        }
+      }
+    }
+  }
+  section.second {
+    h2 {
+      margin-bottom: 10px;
+      margin-top: 40px;
+    }
+    h3 {
+      margin-top: 0;
+    }
+    .features {
+      &:last-of-type {
+        .feature {
+          right: 30px;
+          left: auto;
+        }
+      }
+      .feature {
+        position: relative;
+        left: 30px;
+      }
+    }
+  }
+});
 
-// not-slider
+
+// not a slider
 .iphone2 {
   width: 211px;
   height: 447px;
@@ -332,14 +365,22 @@ section.second {
 }
 
 // slider list
-.setSlides(@num) when (@num > 0) {
+.setSlides(@num, @height) when (@num > 0) {
   &.slide-@{num} .slider-window{
     .canvas {
+      // .slide:nth-of-type(@{prev}) {
+      //   z-index: 3;
+      //   transform: translate3d(0px, 0, 0px);
+      // }
+      // .slide:nth-of-type(@{num}) {
+      //   z-index: 4;
+      //   transform: translate3d(0px, 0, 0px);
+      // }
       // top: (@num - 1) * -100%;
-      transform: translate3d(0px, (@num - 1) * -(@slide-height), 0px);
+      transform: translate3d(0px, (@num - 1) * -(@height), 0px);
     }
   }
-  .setSlides((@num - 1));
+  .setSlides((@num - 1), @height);
 }
 
 // team section
@@ -348,10 +389,10 @@ section.team {
   .profile {
     max-width: 295px;
     margin: 0 auto 5vh;
-    @media (max-height: 940px) {
-      margin-bottom: 0;
-      // width: 200px;
-    }
+    // @media (max-height: 940px) {
+    //   margin-bottom: 0;
+    //   // width: 200px;
+    // }
   }
   .avatar {
     overflow: hidden;
@@ -375,7 +416,7 @@ section.team {
     }
   }
   h2 {
-    margin: 3vh 0 5vh;
+    margin: 5vh 0 3vh;
   }
   h5 {
     @media (max-height: 940px) {
@@ -401,6 +442,17 @@ section.team {
   }
 }
 
+.media(940px, {
+  section.team {
+    .profile {
+      margin-bottom: 0;
+    }
+    .avatar {
+      width: 120px;
+      height: 120px;
+    }
+  }
+});
 // 4th section
 section.fourth {
   background: @creamy;
