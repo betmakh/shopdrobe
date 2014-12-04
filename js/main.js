@@ -60,17 +60,6 @@ $(function() {
   });
 });
 
-function sliderInit() {
-  for (var i = 0; i < $('.features .feature').length; i++ ) {
-    console.log('nuka '+ i);
-    $('.features .feature')[i].click(function () {
-      console.log($(this));
-      $(this).closest('section').find('.iphone').attr('class', 'iphone slide-' + (i+1));
-      $('.features .feature').removeClass('active')
-      $(this).addClass('active');
-    });
-  }
-}
 function hidePopUp() {
   $('.popup-wrapper').removeClass('active');
 }
