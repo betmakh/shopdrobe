@@ -75,6 +75,7 @@ section {
   .ipad {
     background-image: url(../img/ipad.png);
     position: absolute;
+    background-size: contain;
     background-repeat: no-repeat;
     min-height: 435px;
     min-width: 830px;
@@ -347,7 +348,7 @@ section.second {
     }
     h3 {
       margin-top: 0;
-    }
+    }w
     .features {
       &:last-of-type {
         .feature {
@@ -519,6 +520,7 @@ section.fourth {
 button.fb {
   font-family: 'helveticaneuecyrlight', @font;
   color: #fff;
+  display: inline-block;
   font-size: 26px;
   padding: 11px 26px 12px 85px;
   min-width: 280px;
@@ -574,6 +576,13 @@ button.button {
   background: transparent;
   border: none;
   position: fixed;
+  button.toggle {
+    border-color: transparent;
+    .icon-bar {
+      border-radius: 3px;
+      background-color: @orange;
+    }
+  }
   .logo {
     width: 190px;
     float: left;
@@ -583,9 +592,19 @@ button.button {
     transition: .3s ease;
     background: url(../img/logo.png) 50% 50% no-repeat;
   }
+  .collapse.in {
+    .default-nav {
+      li {
+        margin: 3px 10px;
+         a {
+          background: fade(#fff, 70%)
+        }
+      }
+    }
+  }
   .nav {
     padding-top: 10px;
-    margin-right: -30px;
+    // margin-right: -30px;
   }
 }
 .nav.default-nav {

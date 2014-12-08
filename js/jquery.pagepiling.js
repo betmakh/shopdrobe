@@ -9,7 +9,8 @@
  * ========================================================== */
 
 (function ($) {
-    $.fn.pagepiling = function (options) {
+    if (!isMobile()) {
+       $.fn.pagepiling = function (options) {
         var container = $(this);
         var lastScrolledDestiny;
         var lastAnimation = 0;
@@ -887,5 +888,7 @@
             return 'translate3d(0px, -100%, 0px)';
         }
 
-    };
+    }; 
+    }
+    
 })(jQuery);

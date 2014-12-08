@@ -7,7 +7,8 @@
  * Copyright (C) 2013 alvarotrigo.com - A project by Alvaro Trigo
  *
  * ========================================================== */
-html, body {
+ @media (min-width: 770px) {
+    html, body {
     overflow:hidden;
     margin:0;
     padding:0;
@@ -123,3 +124,5 @@ html, body {
 .pp-tooltip.left {
     left: 20px;
 }
+
+ }
