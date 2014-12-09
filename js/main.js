@@ -51,7 +51,7 @@ $(function() {
     // },
     navigation: false, 
     afterLoad: function(anchorLink, index){
-      if(anchorLink == 'page1'){
+      if(anchorLink == 'first'){
           $('#nav').find('.logo').css('opacity', '1');
       } else {
           $('#nav').find('.logo').css('opacity', '0');
@@ -63,3 +63,4 @@ $(function() {
 function hidePopUp() {
   $('.popup-wrapper').removeClass('active');
 }
+

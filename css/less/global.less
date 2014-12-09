@@ -39,7 +39,7 @@
 @green: #7aca7a;
 @red: #f89898;
 
-@mobile-max-width: 768px;
+@mobile-max-width: 480px;
 @width: 970px;
 
 html, html a {
@@ -80,13 +80,13 @@ section {
   background-repeat: no-repeat;
   min-height: 435px;
   min-width: 830px;
-  right: -160px;
+  right: -190px;
   padding-top: 20px;
   padding-left: 225px;
   bottom: 0;
 }
 
-@media (min-width: @mobile-max-width) and (min-height: 920px) {
+@media (min-width: @mobile-max-width) and (min-height: 900px) {
   .ipad {
     height: 590px;
     padding-top: 21px;
@@ -364,6 +364,15 @@ section.second {
   height: @height;
   padding: 80px 15px 10px;
   background: url(../img/iphone.png) 50% 50% no-repeat;
+  &:before {
+    content: '';
+    position: absolute;
+    top: 10%;
+    left: -24%;
+    width: 42px;
+    height: 37px;
+    background: url(../img/arrow-white.png) 50% 50% no-repeat;
+  }
   .slider-window {
     background: #000;
     overflow: hidden;
@@ -602,6 +611,8 @@ button.fb {
   font-family: 'helveticaneuecyrlight', @font;
   color: #fff;
   display: inline-block;
+  z-index: 2;
+  position: relative;
   font-size: 26px;
   padding: 11px 15px 12px 67px;
   min-width: 260px;
@@ -627,6 +638,15 @@ button.fb {
     top: 9%;
     left: 0;
     border-right: 1px solid #fff;
+  }
+  &.arrow:before {
+    content: '';
+    position: absolute;
+    top: -140%;
+    left: 117%;
+    width: 51px;
+    height: 26px;
+    background: url(../img/arrow-orange.png) 50% 50% no-repeat;
   }
 }
 
@@ -665,14 +685,17 @@ button.button {
   position: fixed;
   @media (max-width: @mobile-max-width) {
     // position: absolute;
-    padding-left: 15px;
-    padding-right: 15px;
+    padding: 15px;
+    background: fade(#F7E9DF, 95%);
   }
   button.toggle {
     border-color: transparent;
     .icon-bar {
       border-radius: 3px;
       background-color: @orange;
+    }
+    &:hover, &:focus {
+      background: transparent;
     }
   }
   .logo {
@@ -685,6 +708,9 @@ button.button {
     background: url(../img/logo.png) 50% 50% no-repeat;
   }
   .collapse.in, .collapsing{
+    &.navbar-collapse {
+      border: none;
+    }
     .default-nav {
       li {
         margin: 3px 10px;

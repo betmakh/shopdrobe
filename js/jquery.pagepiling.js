@@ -10,6 +10,7 @@
 
 (function ($) {
     if (!isMobile()) {
+        window.addCssFile('css/jquery.pagepiling.css');
        $.fn.pagepiling = function (options) {
         var container = $(this);
         var lastScrolledDestiny;
