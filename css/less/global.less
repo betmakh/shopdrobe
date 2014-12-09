@@ -39,6 +39,7 @@
 @green: #7aca7a;
 @red: #f89898;
 
+@mobile-max-width: 768px;
 @width: 970px;
 
 html, html a {
@@ -114,11 +115,15 @@ section.first {
 // headers
 h1 {
   font-size: 48px;
-  margin-top: 87px;
+  margin-top: 7vh;
   line-height: 48px;
-  margin-bottom: 20px;
+  margin-bottom: 2vh;
   font-family: 'helveticaneuecyrlight', @font;
   color: @orange;
+  @media (max-width: @mobile-max-width) {
+    text-align: center;
+    margin-top: 10px;
+  }
 }
 
 h2 {
@@ -184,6 +189,11 @@ section.second {
     .feature {
       & + .feature {
         margin-top: 6vh;
+      }
+      @media (max-width: @mobile-max-width) {
+        width: 90%;      
+        margin-left: auto;
+        margin-right: auto;
       }
       p{
         text-align: center;
@@ -394,15 +404,15 @@ section.second {
 // team section
 section.team {
   background: #fff;
+  @media (max-width: @mobile-max-width) {
+    padding-bottom: 70px;      
+  }
   .profile {
     max-width: 295px;
     margin: 0 auto 5vh;
     position: relative;
     outline: none;
-    // @media (max-height: 940px) {
-    //   margin-bottom: 0;
-    //   // width: 200px;
-    // }
+    
   }
   .avatar {
     overflow: hidden;
@@ -576,6 +586,11 @@ button.button {
   background: transparent;
   border: none;
   position: fixed;
+  @media (max-width: @mobile-max-width) {
+    position: absolute;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
   button.toggle {
     border-color: transparent;
     .icon-bar {

@@ -10,7 +10,8 @@ section.first .container{height:100%;position:relative;padding-top:20vh}
 section.first h3{margin-top:5vh;line-height:35px;margin-bottom:48px;font-size:28px;font-family:helveticaneuecyrlight,arial,sans-serif;color:#934138}
 section.first .fb{margin:7vh 0}
 section.first .fb .fb-follow{position:absolute;opacity:0}
-h1{font-size:48px;margin-top:87px;line-height:48px;margin-bottom:20px;font-family:helveticaneuecyrlight,arial,sans-serif;color:#934138}
+h1{font-size:48px;margin-top:7vh;line-height:48px;margin-bottom:2vh;font-family:helveticaneuecyrlight,arial,sans-serif;color:#934138}
+@media (max-width:768px){h1{text-align:center;margin-top:10px}}
 h2{font-size:42px;font-family:helveticaneuecyrlight,arial,sans-serif;color:#fff;text-align:center}
 h2.orange{color:#f5664b}
 h3{font-family:helveticaneuecyrlight,arial,sans-serif;font-size:37px;margin:40px 0}
@@ -27,6 +28,7 @@ section.second h3{margin-top:10px}
 section.second .features{cursor:pointer}
 @media (min-height:940px){section.second .features{padding-top:1vh}}
 section.second .features .feature+.feature{margin-top:6vh}
+@media (max-width:768px){section.second .features .feature{width:90%;margin-left:auto;margin-right:auto}}
 section.second .features .feature p{text-align:center;-webkit-transition:.2s ease;transition:.2s ease}
 @media (max-height:940px){section.second .features .feature p{font-size:16px}}
 section.second .features .feature h5{margin-bottom:1.5vh}
@@ -74,6 +76,7 @@ section.second w .features:last-of-type .feature{right:30px;left:auto}
 section.second w .features .feature{position:relative;left:30px}}
 .iphone2{width:211px;height:447px;background:url(../img/iphone2.png)}
 section.team{background:#fff}
+@media (max-width:768px){section.team{padding-bottom:70px}}
 section.team .profile{max-width:295px;margin:0 auto 5vh;position:relative;outline:0}
 section.team .avatar{overflow:hidden;height:162px;-webkit-transition:.6s ease;transition:.6s ease;width:162px;margin:auto;border-radius:50%}
 @media (max-height:940px){section.team .avatar{width:120px;height:120px}}
@@ -103,6 +106,7 @@ button.fb:after{content:'';position:absolute;width:64px;height:77%;background:ur
 button.button{border-radius:6px;border:2px solid #f5664b;padding:14px 25px;color:#f5664b;font-family:helveticaneuecyrlight,arial,sans-serif;font-size:14px;outline:0;text-align:center;background:rgba(243,236,215,.5);line-height:100%;text-transform:uppercase;-webkit-transition:.3s ease;transition:.3s ease}
 button.button:active{background:rgba(245,102,75,.5);border-color:transparent}
 .navbar{width:100%;z-index:33;padding-top:24px;background:0 0;border:none;position:fixed}
+@media (max-width:768px){.navbar{position:absolute;padding-left:15px;padding-right:15px}}
 .navbar button.toggle{border-color:transparent}
 .navbar button.toggle .icon-bar{border-radius:3px;background-color:#934138}
 .navbar .logo{width:190px;float:left;display:block;opacity:1;height:50px;-webkit-transition:.3s ease;transition:.3s ease;background:url(../img/logo.png) 50% 50% no-repeat}
