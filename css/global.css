@@ -4,11 +4,17 @@ body,html{height:100%}
 section{overflow:auto;padding-top:40px;padding-bottom:40px}
 section.section{overflow:hidden}
 section.section.first{padding:0}
-.ipad{background-image:url(../img/ipad.png);position:absolute;background-size:contain;background-repeat:no-repeat;min-height:435px;min-width:830px;right:-160px;padding-top:20px;padding-left:225px;bottom:0}
+.ipad{background-image:url(../img/ipad.png);position:absolute;background-size:cover;background-repeat:no-repeat;min-height:435px;min-width:830px;right:-160px;padding-top:20px;padding-left:225px;bottom:0}
+@media (min-width:768px) and (min-height:920px){.ipad{height:590px;padding-top:21px;padding-left:291px;width:935px}
+.ipad iframe{width:384px;height:288px}}
+@media (max-width:768px){.ipad{position:relative;top:0;left:0;margin:auto;padding:0 0 20px;min-height:0;background:0 0;min-width:0}
+.ipad:after{left:-228px;top:-14px;z-index:0;width:237%;height:186px;content:'';position:absolute;background-size:contain}
+.ipad iframe{height:auto;margin:auto;position:relative;display:block;width:260px;z-index:5}}
 section.first{background:url(../img/section-bg/bg-1.png) 50% 50%/cover}
 section.first .container{height:100%;position:relative;padding-top:20vh}
 section.first h3{margin-top:5vh;line-height:35px;margin-bottom:48px;font-size:28px;font-family:helveticaneuecyrlight,arial,sans-serif;color:#934138}
 section.first .fb{margin:7vh 0}
+@media (max-width:768px){section.first .fb{margin-left:auto;display:block;margin-right:auto}}
 section.first .fb .fb-follow{position:absolute;opacity:0}
 h1{font-size:48px;margin-top:7vh;line-height:48px;margin-bottom:2vh;font-family:helveticaneuecyrlight,arial,sans-serif;color:#934138}
 @media (max-width:768px){h1{text-align:center;margin-top:10px}}
@@ -17,6 +23,7 @@ h2.orange{color:#f5664b}
 h3{font-family:helveticaneuecyrlight,arial,sans-serif;font-size:37px;margin:40px 0}
 h3.white{color:#fff}
 h3.orange{color:#f5664b}
+@media (max-width:768px){h3,h3+p{text-align:center}}
 h5{font-size:22px;text-align:center;color:#666;font-family:helveticaneuecyrlight,arial,sans-serif}
 h5.white{color:#fff}
 h6{color:#000;text-align:center;font-family:helveticaneuecyrlight,arial,sans-serif;font-size:16px}
@@ -28,7 +35,7 @@ section.second h3{margin-top:10px}
 section.second .features{cursor:pointer}
 @media (min-height:940px){section.second .features{padding-top:1vh}}
 section.second .features .feature+.feature{margin-top:6vh}
-@media (max-width:768px){section.second .features .feature{width:90%;margin-left:auto;margin-right:auto}}
+@media (max-width:768px){section.second .features .feature{width:90%;max-width:200px;margin-left:auto;margin-right:auto}}
 section.second .features .feature p{text-align:center;-webkit-transition:.2s ease;transition:.2s ease}
 @media (max-height:940px){section.second .features .feature p{font-size:16px}}
 section.second .features .feature h5{margin-bottom:1.5vh}
@@ -61,7 +68,7 @@ section.second .features .feature .icon{-webkit-transition:-webkit-transform .3s
 .iphone .slider-window .canvas{width:100%;position:relative;-webkit-transition:1s cubic-bezier(0.35,.01,.58,.69);transition:1s cubic-bezier(0.35,.01,.58,.69);left:1px}
 .iphone .slider-window .canvas .slide{height:575px}
 .iphone .slider-window .canvas .slide img{width:100%;display:block;max-height:100%;margin:auto}
-@media (max-height:940px){.iphone{background-position:50% 0;background-size:contain;width:230px;height:470px;padding-top:57px}
+@media (max-height:940px){.iphone{background-position:50% 0;background-size:cover;width:230px;height:470px;padding-top:57px}
 .iphone.slide-6 .slider-window .canvas{-webkit-transform:translate3d(0px,-1750px,0);transform:translate3d(0px,-1750px,0)}
 .iphone.slide-5 .slider-window .canvas{-webkit-transform:translate3d(0px,-1400px,0);transform:translate3d(0px,-1400px,0)}
 .iphone.slide-4 .slider-window .canvas{-webkit-transform:translate3d(0px,-1050px,0);transform:translate3d(0px,-1050px,0)}
@@ -96,22 +103,25 @@ section.team .profile:focus p{max-height:300px;padding-top:5px;padding-bottom:5p
 section.team .profile p{position:absolute;z-index:10;padding:0 5px;width:100%;max-height:0}}
 section.fourth{background:#f3ecd7;padding-bottom:40px}
 section.fourth>.container>.row{margin-top:20vh}
+@media (max-width:768px){section.fourth>.container>.row{margin-top:0}}
 section.fourth h3{line-height:48px;margin-right:-15px;margin-bottom:30px;margin-top:35px;-webkit-transition:.3s linear;transition:.3s linear}
+@media (max-width:768px){section.fourth h3{margin-right:0}}
 @media (max-height:940px){section.fourth h3{line-height:35px}}
 section.fourth p{line-height:29px}
 section.fourth p+button{margin-top:40px}
-button.fb{font-family:helveticaneuecyrlight,arial,sans-serif;color:#fff;font-size:26px;padding:11px 26px 12px 85px;min-width:280px;text-align:right;position:relative;border:none;border-radius:7px;background:#3054a0;box-shadow:inset 0 0 16px #9cb7f2;display:inline-block;-webkit-transition:.3s ease;transition:.3s ease;outline:0}
+button.fb{font-family:helveticaneuecyrlight,arial,sans-serif;color:#fff;font-size:26px;padding:11px 15px 12px 67px;min-width:260px;position:relative;border:none;text-align:right;border-radius:7px;background:#3054a0;box-shadow:inset 0 0 16px #9cb7f2;display:inline-block;-webkit-transition:.3s ease;transition:.3s ease;outline:0}
 button.fb:active{box-shadow:inset 0 0 6px rgba(52,78,134,.75)}
 button.fb:after{content:'';position:absolute;width:64px;height:77%;background:url(../img/fb-icon.png) 23px 50% no-repeat;top:9%;left:0;border-right:1px solid #fff}
 button.button{border-radius:6px;border:2px solid #f5664b;padding:14px 25px;color:#f5664b;font-family:helveticaneuecyrlight,arial,sans-serif;font-size:14px;outline:0;text-align:center;background:rgba(243,236,215,.5);line-height:100%;text-transform:uppercase;-webkit-transition:.3s ease;transition:.3s ease}
 button.button:active{background:rgba(245,102,75,.5);border-color:transparent}
+@media (max-width:768px){button.button{margin-left:50%;-webkit-transform:translate(-50%,0);-ms-transform:translate(-50%,0);transform:translate(-50%,0);white-space:nowrap}}
 .navbar{width:100%;z-index:33;padding-top:24px;background:0 0;border:none;position:fixed}
-@media (max-width:768px){.navbar{position:absolute;padding-left:15px;padding-right:15px}}
+@media (max-width:768px){.navbar{padding-left:15px;padding-right:15px}}
 .navbar button.toggle{border-color:transparent}
 .navbar button.toggle .icon-bar{border-radius:3px;background-color:#934138}
 .navbar .logo{width:190px;float:left;display:block;opacity:1;height:50px;-webkit-transition:.3s ease;transition:.3s ease;background:url(../img/logo.png) 50% 50% no-repeat}
-.navbar .collapse.in .default-nav li{margin:3px 10px}
-.navbar .collapse.in .default-nav li a{background:rgba(255,255,255,.7)}
+.navbar .collapse.in .default-nav li,.navbar .collapsing .default-nav li{margin:3px 10px}
+.navbar .collapse.in .default-nav li a,.navbar .collapsing .default-nav li a{background:rgba(255,255,255,.7)}
 .navbar .nav{padding-top:10px}
 .nav.default-nav li+li{margin-left:21px}
 .nav.default-nav li>a{color:#934138;border:2px solid transparent;border-radius:6px;padding:8px 5px;text-align:center;min-width:100px;-webkit-transition:.3s linear;transition:.3s linear;font-size:17px;background:rgba(255,255,255,.35);font-family:helveticaneuecyrmedium,arial,sans-serif}
@@ -120,7 +130,7 @@ button.button:active{background:rgba(245,102,75,.5);border-color:transparent}
 .nav.default-nav li.active a{color:#934138;background:rgba(255,255,255,.35);border-color:#ff9884}
 .nav.default-nav li.active a:focus,.nav.default-nav li.active a:hover{color:#934138;background:rgba(250,197,182,.5);border-color:transparent}
 .modal.contact h5{color:#934138;width:80%;margin-left:auto;margin-right:auto;margin-bottom:15px}
-.modal.contact .modal-content{background:#faf7ed;font-family:helveticaneuecyrlight,arial,sans-serif;border-radius:3px;width:330px;margin:auto}
+.modal.contact .modal-content{background:#faf7ed;font-family:helveticaneuecyrlight,arial,sans-serif;border-radius:3px;width:300px;margin:auto}
 .modal.contact .modal-content form{width:93%;margin:auto}
 .modal.contact .modal-content form>label{font-family:inherit;width:100%;color:rgba(76,80,93,.7);display:block;font-size:16px;text-indent:11px}
 .modal.contact .modal-content form button{display:block;font-family:inherit;border:none;color:#fff;outline:0;box-shadow:inset 0 0 6px rgba(249,175,162,.75);background:#f5664b;width:100%;-webkit-transition:.3s ease;transition:.3s ease;font-size:22px;margin-top:17px;padding:10px 0;line-height:20px;margin-bottom:10px}

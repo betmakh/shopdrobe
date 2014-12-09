@@ -73,20 +73,69 @@ section {
 
 
 
+.ipad {
+  background-image: url(../img/ipad.png);
+  position: absolute;
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 435px;
+  min-width: 830px;
+  right: -160px;
+  padding-top: 20px;
+  padding-left: 225px;
+  bottom: 0;
+}
+
+@media (min-width: @mobile-max-width) and (min-height: 920px) {
   .ipad {
-    background-image: url(../img/ipad.png);
-    position: absolute;
-    background-size: contain;
-    background-repeat: no-repeat;
-    min-height: 435px;
-    min-width: 830px;
-    right: -160px;
-    padding-top: 20px;
-    padding-left: 225px;
-    bottom: 0;
+    height: 590px;
+    padding-top: 21px;
+    padding-left: 291px;
+    width: 935px;
+    iframe {
+      width: 384px;
+      height: 288px;
+    }
   }
+}
+@media (max-width: @mobile-max-width) {
+  .ipad {
+    @width: 260px;
+    @height: 200px;
+    // @height: 
+    position: relative;
+    top: 0;
+    left: 0;
+    margin: auto;
+    padding: 0;
+    min-height: 0;
+    padding-bottom: 20px;
+    background: none;
+    min-width: 0;
+    &:after {
+      left: -228px;
+      top: -14px;
+      z-index: 0;
+      width: 237%;
+      height: 186px;
+      // transform: translate3d(-26%, 0 ,0);
+      content: '';
+      position: absolute;
+      // background: url(../img/ipad.png) 50% 50% no-repeat;
+      background-size: contain;
 
-
+    }
+    iframe {
+      height: auto;
+      margin: auto;
+      position: relative;
+      display: block;
+      width: 260px;
+      z-index: 5;   
+      // width: 100%;
+    }
+  }
+}
 
 section.first {
   background: url(../img/section-bg/bg-1.png) 50% 50%;
@@ -95,6 +144,7 @@ section.first {
     height: 100%;
     position: relative;
     padding-top: 20vh;
+
   }
   h3 {
     margin-top: 5vh;
@@ -106,6 +156,11 @@ section.first {
   }
   .fb {
     margin: 7vh 0;
+    @media (max-width: @mobile-max-width) {
+      margin-left: auto;
+      display: block;
+      margin-right: auto;
+    }
     .fb-follow {
       position: absolute;
       opacity: 0;
@@ -134,6 +189,7 @@ h2 {
   &.orange {
     color: @orange-light;
   }
+
 }
 h3 {
   font-family: 'helveticaneuecyrlight', @font;
@@ -145,7 +201,15 @@ h3 {
   &.orange {
     color: @orange-light;
   }
-
+   
+}
+@media (max-width: @mobile-max-width) {
+  h3 {
+    text-align: center;
+    &+p {
+      text-align: center;
+    }
+  }
 }
 h5 {
   font-size: 22px;
@@ -191,7 +255,8 @@ section.second {
         margin-top: 6vh;
       }
       @media (max-width: @mobile-max-width) {
-        width: 90%;      
+        width: 90%;   
+        max-width: 200px;   
         margin-left: auto;
         margin-right: auto;
       }
@@ -335,7 +400,7 @@ section.second {
     @height: 470px;
     .setSlides(6, @slide-height);
     background-position: 50% 0;
-    background-size: contain;
+    background-size: cover;
     width: 230px;
     height: @height;
     padding-top: 57px;
@@ -508,6 +573,9 @@ section.fourth {
   padding-bottom: 40px;
   &>.container>.row { 
     margin-top: 20vh;
+    @media (max-width: @mobile-max-width) {
+      margin-top: 0px;
+    }
   }
   h3 {
     line-height: 48px;
@@ -515,6 +583,9 @@ section.fourth {
     margin-bottom: 30px;
     margin-top: 35px;
     transition: .3s linear;
+    @media (max-width: @mobile-max-width) {
+      margin-right: 0;
+    }
     .media-h(940px, {
       line-height: 35px;
       })
@@ -532,11 +603,12 @@ button.fb {
   color: #fff;
   display: inline-block;
   font-size: 26px;
-  padding: 11px 26px 12px 85px;
-  min-width: 280px;
+  padding: 11px 15px 12px 67px;
+  min-width: 260px;
   text-align: right;
   position: relative;
   border: none;
+  text-align: right;
   border-radius: 7px;
   background: #3054a0;
   box-shadow: inset 0 0 16px #9cb7f2;
@@ -576,6 +648,11 @@ button.button {
     background: fade(@orange-light, 50%);
     border-color: transparent;
   }
+  @media (max-width: @mobile-max-width) {
+  margin-left: 50%;
+  transform: translate(-50%,0);
+  white-space: nowrap;
+  }
 }
 
 // nav
@@ -587,7 +664,7 @@ button.button {
   border: none;
   position: fixed;
   @media (max-width: @mobile-max-width) {
-    position: absolute;
+    // position: absolute;
     padding-left: 15px;
     padding-right: 15px;
   }
@@ -607,7 +684,7 @@ button.button {
     transition: .3s ease;
     background: url(../img/logo.png) 50% 50% no-repeat;
   }
-  .collapse.in {
+  .collapse.in, .collapsing{
     .default-nav {
       li {
         margin: 3px 10px;
@@ -675,7 +752,7 @@ button.button {
     background: #faf7ed;
     font-family: 'helveticaneuecyrlight', @font;
     border-radius: 3px;
-    width: 330px;
+    width: 300px;
     margin: auto;
     form {
       width: 93%;
