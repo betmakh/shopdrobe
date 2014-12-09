@@ -41,7 +41,7 @@ $(function() {
   });
   $('#pagepiling').pagepiling({
     menu: '#nav',
-    anchors: ['page1', 'page2', 'page3', 'page4'],
+    anchors: ['first', 'second', 'third', 'fourth'],
     verticalCentered: false,
     // navigation: {
     //   'textColor': '#f2f2f2',
