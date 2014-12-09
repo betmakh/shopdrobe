@@ -1,6 +1,6 @@
 {
-  "name": "landing",
-  "version": "0.0.0",
+  "name": "shopdrobe",
+  "version": "0.0.1",
   "description": "ERROR: No README data found!",
   "main": "Gulpfile.js",
   "dependencies": {
@@ -14,5 +14,13 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Meshcheriakov Mykyta",
-  "license": "BSD-2-Clause"
+  "license": "BSD-2-Clause",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/betmakh/shopdrobe.git"
+  },
+  "bugs": {
+    "url": "https://github.com/betmakh/shopdrobe/issues"
+  },
+  "homepage": "https://github.com/betmakh/shopdrobe"
 }
