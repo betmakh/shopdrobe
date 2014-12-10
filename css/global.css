@@ -4,9 +4,10 @@ body,html{height:100%}
 section{overflow:auto;padding-top:40px;padding-bottom:40px}
 section.section{overflow:hidden}
 section.section.first{padding:0}
-.ipad{background-image:url(../img/ipad.png);position:absolute;background-size:cover;background-repeat:no-repeat;min-height:435px;min-width:830px;right:-190px;padding-top:20px;padding-left:225px;bottom:0}
-@media (min-width:480px) and (min-height:900px){.ipad{height:590px;padding-top:21px;padding-left:291px;width:935px}
-.ipad iframe{width:384px;height:288px}}
+.ipad{background-image:url(../img/ipad.png);position:absolute;background-size:cover;background-repeat:no-repeat;min-height:435px;min-width:830px;right:-190px;padding-top:18px;padding-left:255px;bottom:0}
+.ipad iframe{width:335px;height:252px}
+@media (min-width:992px) and (min-height:850px){.ipad{height:623px;padding-top:21px;padding-left:307px;width:1000px}
+.ipad iframe{width:406px;height:305px}}
 @media (max-width:480px){.ipad{position:relative;top:0;left:0;margin:auto;padding:0 0 20px;min-height:0;background:0 0;min-width:0}
 .ipad:after{left:-228px;top:-14px;z-index:0;width:237%;height:186px;content:'';position:absolute;background-size:contain}
 .ipad iframe{height:auto;margin:auto;position:relative;display:block;width:260px;z-index:5}}
@@ -99,9 +100,11 @@ section.team p{margin-top:13px;font-size:16px;-webkit-transition:.3s linear;tran
 @media (max-height:940px){section.team p{font-size:14px;line-height:15px;margin-top:0}}
 @media (max-height:940px){section.team .profile{margin-bottom:0}
 section.team .avatar{width:120px;height:120px}}
-@media (max-width:980px){section.team .profile{position:relative}
-section.team .profile:focus p{max-height:300px;padding-top:5px;padding-bottom:5px;box-shadow:0 0 10px rgba(0,0,0,.6);background:rgba(255,255,255,.95)}
-section.team .profile p{position:absolute;z-index:10;padding:0 5px;width:100%;max-height:0}}
+@media (max-width:980px){section.team .profile{position:relative;text-align:center}
+section.team .profile .avatar:focus~p,section.team .profile h5:focus~p,section.team .profile h6:focus~p{max-height:300px;padding-top:5px;padding-bottom:5px;box-shadow:0 0 10px rgba(0,0,0,.6);background:rgba(255,255,255,.95)}
+section.team .profile p{position:absolute;z-index:10;padding:0 5px;width:100%;max-height:0}
+section.team .profile .avatar,section.team .profile h6{outline:0}
+section.team .profile h5{display:inline-block;outline:0}}
 section.fourth{background:#f3ecd7;padding-bottom:40px}
 section.fourth>.container>.row{margin-top:20vh}
 @media (max-width:480px){section.fourth>.container>.row{margin-top:0}}
@@ -113,11 +116,11 @@ section.fourth p+button{margin-top:40px}
 button.fb{font-family:helveticaneuecyrlight,arial,sans-serif;color:#fff;z-index:2;font-size:26px;padding:11px 15px 12px 67px;min-width:260px;position:relative;border:none;text-align:right;border-radius:7px;background:#3054a0;box-shadow:inset 0 0 16px #9cb7f2;display:inline-block;-webkit-transition:.3s ease;transition:.3s ease;outline:0}
 button.fb:active{box-shadow:inset 0 0 6px rgba(52,78,134,.75)}
 button.fb:after{content:'';position:absolute;width:64px;height:77%;background:url(../img/fb-icon.png) 23px 50% no-repeat;top:9%;left:0;border-right:1px solid #fff}
-button.fb.arrow:before{content:'';position:absolute;top:-140%;left:117%;width:51px;height:26px;background:url(../img/arrow-orange.png) 50% 50% no-repeat}
+button.fb.arrow:before{content:'';position:absolute;top:-90%;left:90%;width:51px;height:26px;background:url(../img/arrow-orange.png) 50% 50% no-repeat}
 button.button{border-radius:6px;border:2px solid #f5664b;padding:14px 25px;color:#f5664b;font-family:helveticaneuecyrlight,arial,sans-serif;font-size:14px;outline:0;text-align:center;background:rgba(243,236,215,.5);line-height:100%;text-transform:uppercase;-webkit-transition:.3s ease;transition:.3s ease}
 button.button:active{background:rgba(245,102,75,.5);border-color:transparent}
 @media (max-width:480px){button.button{margin-left:50%;-webkit-transform:translate(-50%,0);-ms-transform:translate(-50%,0);transform:translate(-50%,0);white-space:nowrap}}
-.navbar{width:100%;z-index:33;padding-top:24px;background:0 0;border:none;position:fixed}
+.navbar{width:100%;z-index:33;padding-top:15px;background:0 0;border:none;position:fixed}
 @media (max-width:480px){.navbar{padding:15px;background:rgba(247,233,223,.95)}}
 .navbar button.toggle{border-color:transparent}
 .navbar button.toggle .icon-bar{border-radius:3px;background-color:#934138}
