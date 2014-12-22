@@ -16,6 +16,19 @@ $(function() {
     });
   }
   
+  $('.profile').click(function(event) {
+    if(isMobile()) {
+      if( $(this).hasClass('active')) {
+        $('.profile').removeClass('active')
+        $(this).removeClass('active')
+      } else {
+        $('.profile').removeClass('active')
+        $(this).addClass('active')
+      }
+      // $(this).closest('.row').find('.active')
+      // $(this).toggleClass('active');
+    }
+  });
 
   $('#pagepiling').pagepiling({
     menu: '#nav',

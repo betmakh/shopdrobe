@@ -11,14 +11,15 @@ section.section.first{padding:0}
 @media (max-width:480px){.ipad{position:relative;top:0;left:0;margin:auto;padding:0 0 20px;min-height:0;background:0 0;min-width:0}
 .ipad:after{left:-228px;top:-14px;z-index:0;width:237%;height:186px;content:'';position:absolute;background-size:contain}
 .ipad iframe{height:auto;margin:auto;position:relative;display:block;width:260px;z-index:5}}
-section.first{background:url(../img/section-bg/bg-1.png) 50% 50%/cover}
+section.first{background:url(../img/section-bg/bg-1.png) 50% 50%/cover,0 0/cover #f7e9df}
 section.first .container{height:100%;position:relative;padding-top:20vh}
+@media (max-width:480px){section.first .container{padding-top:86px}}
 section.first h3{margin-top:5vh;line-height:35px;margin-bottom:48px;font-size:28px;font-family:helveticaneuecyrlight,arial,sans-serif;color:#934138}
 section.first .fb{margin:7vh 0}
 @media (max-width:480px){section.first .fb{margin-left:auto;display:block;margin-right:auto}}
 section.first .fb .fb-follow{position:absolute;opacity:0}
 h1{font-size:48px;margin-top:7vh;line-height:48px;margin-bottom:2vh;font-family:helveticaneuecyrlight,arial,sans-serif;color:#934138}
-@media (max-width:480px){h1{text-align:center;margin-top:10px}}
+@media (max-width:480px){h1{text-align:center;margin:10px 0}}
 h2{font-size:42px;font-family:helveticaneuecyrlight,arial,sans-serif;color:#fff;text-align:center}
 h2.orange{color:#f5664b}
 h3{font-family:helveticaneuecyrlight,arial,sans-serif;font-size:37px;margin:40px 0}
@@ -40,11 +41,10 @@ section.second .features .feature+.feature{margin-top:6vh}
 section.second .features .feature p{text-align:center;-webkit-transition:.2s ease;transition:.2s ease}
 @media (max-height:940px){section.second .features .feature p{font-size:16px}}
 section.second .features .feature h5{margin-bottom:1.5vh}
-@media (max-height:940px){section.second .features .feature h5{margin-bottom:1vh}}
+@media (max-height:940px){section.second .features .feature h5{margin-bottom:10px}}
 section.second .features .feature.active .icon{-webkit-transform:scale(1.2);-ms-transform:scale(1.2);transform:scale(1.2)}
-section.second .features .feature.active h5,section.second .features .feature.active p{text-shadow:1px 1px 2px rgba(0,0,0,.5)}
-section.second .features .feature:hover .icon{-webkit-transform:scale(1.2);-ms-transform:scale(1.2);transform:scale(1.2)}
-section.second .features .feature:hover h5,section.second .features .feature:hover p{text-shadow:1px 1px 2px rgba(0,0,0,.5)}
+section.second .features .feature.active h5,section.second .features .feature.active p,section.second .features .feature:hover h5,section.second .features .feature:hover p{text-shadow:1px 1px 2px rgba(0,0,0,.5)}
+@media (min-width:480px){section.second .features .feature:hover .icon{-webkit-transform:scale(1.2);-ms-transform:scale(1.2);transform:scale(1.2)}}
 section.second .features .feature.share.active .icon{background-position:0 -397px}
 section.second .features .feature.share .icon{background-position:0 -497px}
 section.second .features .feature.friends .icon{background-position:0 2px}
@@ -58,6 +58,7 @@ section.second .features .feature.upload.active .icon{background-position:0 -996
 section.second .features .feature.explore.active .icon{background-position:0 -897px}
 section.second .features .feature.explore .icon{background-position:0 -297px}
 section.second .features .feature .icon{-webkit-transition:-webkit-transform .3s ease-in-out;transition:transform .3s ease-in-out;width:50px;height:50px;margin:10px auto 2vh;background:url(../img/icons.png) no-repeat}
+@media (max-width:480px){section.second .features .feature .icon{margin-bottom:12px}}
 .iphone{width:354px;margin:auto;position:relative;height:744px;padding:80px 15px 10px;background:url(../img/iphone.png) 50% 50% no-repeat}
 .iphone.slide-6 .slider-window .canvas{-webkit-transform:translate3d(0px,-2875px,0);transform:translate3d(0px,-2875px,0)}
 .iphone.slide-5 .slider-window .canvas{-webkit-transform:translate3d(0px,-2300px,0);transform:translate3d(0px,-2300px,0)}
@@ -87,11 +88,11 @@ section.second w .features .feature{position:relative;left:30px}}
 section.team{background:#fff}
 @media (max-width:480px){section.team{padding-bottom:70px}}
 section.team .profile{max-width:295px;margin:0 auto 5vh;position:relative;outline:0}
-section.team .avatar{overflow:hidden;height:162px;-webkit-transition:.6s ease;transition:.6s ease;width:162px;margin:auto;border-radius:50%}
+section.team .avatar{overflow:hidden;height:162px;-webkit-transition:.6s ease;transition:.6s ease;width:162px;margin:auto;display:inline-block;border-radius:50%}
 @media (max-height:940px){section.team .avatar{width:120px;height:120px}}
 section.team .avatar:hover{border-radius:3%}
 section.team .avatar img{width:100%;height:100%;-webkit-transition:.6s ease;transition:.6s ease}
-section.team h2{margin:5vh 0 3vh}
+section.team h2{margin:5vh 0 3vh;display:block}
 section.team h5{margin-top:25px}
 @media (max-height:940px){section.team h5{margin-top:10px}}
 section.team h5+h6{margin-top:13px}
@@ -101,10 +102,9 @@ section.team p{margin-top:13px;font-size:16px;-webkit-transition:.3s linear;tran
 @media (max-height:940px){section.team .profile{margin-bottom:0}
 section.team .avatar{width:120px;height:120px}}
 @media (max-width:980px){section.team .profile{position:relative;text-align:center}
-section.team .profile .avatar:focus~p,section.team .profile h5:focus~p,section.team .profile h6:focus~p{max-height:300px;padding-top:5px;padding-bottom:5px;box-shadow:0 0 10px rgba(0,0,0,.6);background:rgba(255,255,255,.95)}
+section.team .profile.active p{max-height:300px;padding-top:5px;padding-bottom:5px;box-shadow:0 0 10px rgba(0,0,0,.6);background:rgba(255,255,255,.95)}
 section.team .profile p{position:absolute;z-index:10;padding:0 5px;width:100%;max-height:0}
-section.team .profile .avatar,section.team .profile h6{outline:0}
-section.team .profile h5{display:inline-block;outline:0}}
+section.team .profile .avatar,section.team .profile h5,section.team .profile h6{outline:0}}
 section.fourth{background:#f3ecd7;padding-bottom:40px}
 section.fourth>.container>.row{margin-top:20vh}
 @media (max-width:480px){section.fourth>.container>.row{margin-top:0}}
@@ -117,6 +117,7 @@ button.fb{font-family:helveticaneuecyrlight,arial,sans-serif;color:#fff;z-index:
 button.fb:active{box-shadow:inset 0 0 6px rgba(52,78,134,.75)}
 button.fb:after{content:'';position:absolute;width:64px;height:77%;background:url(../img/fb-icon.png) 23px 50% no-repeat;top:9%;left:0;border-right:1px solid #fff}
 button.fb.arrow:before{content:'';position:absolute;top:-90%;left:90%;width:51px;height:26px;background:url(../img/arrow-orange.png) 50% 50% no-repeat}
+@media (max-width:480px){button.fb.arrow:before{top:-65%}}
 button.button{border-radius:6px;border:2px solid #f5664b;padding:14px 25px;color:#f5664b;font-family:helveticaneuecyrlight,arial,sans-serif;font-size:14px;outline:0;text-align:center;background:rgba(243,236,215,.5);line-height:100%;text-transform:uppercase;-webkit-transition:.3s ease;transition:.3s ease}
 button.button:active{background:rgba(245,102,75,.5);border-color:transparent}
 @media (max-width:480px){button.button{margin-left:50%;-webkit-transform:translate(-50%,0);-ms-transform:translate(-50%,0);transform:translate(-50%,0);white-space:nowrap}}
